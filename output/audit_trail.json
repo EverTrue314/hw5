@@ -1,0 +1,4835 @@
+[
+  {
+    "timestamp": "2026-10-13T21:13:03.210496+00:00",
+    "event": "database_reset",
+    "outcome": "restored_from_original"
+  },
+  {
+    "timestamp": "2026-10-13T21:14:50.812979+00:00",
+    "event": "agent_run_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "99c535d2486b45cd9fd4c10578fcd457",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1
+  },
+  {
+    "timestamp": "2026-10-13T21:14:52.414435+00:00",
+    "event": "agent_run_failed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "99c535d2486b45cd9fd4c10578fcd457",
+    "parent_run_id": null,
+    "error_type": "ModelHTTPError"
+  },
+  {
+    "timestamp": "2026-10-13T21:15:10.278823+00:00",
+    "event": "agent_run_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "f1c884acb3de44e7b18c4f902a79e462",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1
+  },
+  {
+    "timestamp": "2026-10-13T21:15:11.800327+00:00",
+    "event": "agent_run_failed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "f1c884acb3de44e7b18c4f902a79e462",
+    "parent_run_id": null,
+    "error_type": "ModelHTTPError"
+  },
+  {
+    "timestamp": "2026-10-13T21:18:24.273465+00:00",
+    "event": "agent_run_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1
+  },
+  {
+    "timestamp": "2026-10-13T21:18:27.075778+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "tool_name": "get_ticket_101_tee_reprint_context",
+    "tool_args": {},
+    "mcp_call_number": 1
+  },
+  {
+    "timestamp": "2026-10-13T21:18:27.163649+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "tool_name": "get_ticket_101_tee_reprint_context",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "related_records",
+        "ticket"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:30.127731+00:00",
+    "event": "agent_run_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "cc49b01dc84c4954869436e744227519",
+    "parent_run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "delegation_depth": 1,
+    "agent_run_number": 2
+  },
+  {
+    "timestamp": "2026-10-13T21:18:30.129473+00:00",
+    "event": "agent_run_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "parent_run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "delegation_depth": 1,
+    "agent_run_number": 3
+  },
+  {
+    "timestamp": "2026-10-13T21:18:30.130112+00:00",
+    "event": "agent_run_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "28d77dc08035455687b77df5abc88141",
+    "parent_run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "delegation_depth": 1,
+    "agent_run_number": 4
+  },
+  {
+    "timestamp": "2026-10-13T21:18:30.130933+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 2
+  },
+  {
+    "timestamp": "2026-10-13T21:18:30.144481+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:31.691787+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "cc49b01dc84c4954869436e744227519",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "mcp_call_number": 3
+  },
+  {
+    "timestamp": "2026-10-13T21:18:31.703876+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "cc49b01dc84c4954869436e744227519",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:32.278797+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "28d77dc08035455687b77df5abc88141",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 4
+  },
+  {
+    "timestamp": "2026-10-13T21:18:32.288089+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "28d77dc08035455687b77df5abc88141",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:32.330428+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 5
+  },
+  {
+    "timestamp": "2026-10-13T21:18:32.335727+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:33.575765+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "cc49b01dc84c4954869436e744227519",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 6
+  },
+  {
+    "timestamp": "2026-10-13T21:18:33.582226+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "cc49b01dc84c4954869436e744227519",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:34.230871+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "28d77dc08035455687b77df5abc88141",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "mcp_call_number": 7
+  },
+  {
+    "timestamp": "2026-10-13T21:18:34.232028+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "28d77dc08035455687b77df5abc88141",
+    "tool_name": "get_invoice_status_for_ticket",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 8
+  },
+  {
+    "timestamp": "2026-10-13T21:18:34.241166+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "28d77dc08035455687b77df5abc88141",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:34.244353+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "28d77dc08035455687b77df5abc88141",
+    "tool_name": "get_invoice_status_for_ticket",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "due_date",
+        "invoice_id",
+        "status",
+        "ticket_id"
+      ],
+      "ticket_id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:34.568985+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "mcp_call_number": 9
+  },
+  {
+    "timestamp": "2026-10-13T21:18:34.578620+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "cash_accounts",
+        "invoices",
+        "payments"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:36.655570+00:00",
+    "event": "agent_run_failed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "cc49b01dc84c4954869436e744227519",
+    "parent_run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "error_type": "TypeError",
+    "upstream_status_code": null
+  },
+  {
+    "timestamp": "2026-10-13T21:18:37.174163+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 10
+  },
+  {
+    "timestamp": "2026-10-13T21:18:37.175032+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "mcp_call_number": 11
+  },
+  {
+    "timestamp": "2026-10-13T21:18:37.175414+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE"
+    },
+    "mcp_call_number": 12
+  },
+  {
+    "timestamp": "2026-10-13T21:18:37.187332+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:37.190149+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "open_unpaid_invoices",
+        "shipping_hold",
+        "vendor_found",
+        "vendor_id"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:37.190540+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE"
+    },
+    "result_summary": {
+      "keys": [
+        "list_price",
+        "sku",
+        "unit_cost"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:18:37.194401+00:00",
+    "event": "agent_run_failed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "7b983cd8cd3c4ca39b25a44ff77c1c02",
+    "parent_run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "error_type": "UsageLimitExceeded",
+    "upstream_status_code": null
+  },
+  {
+    "timestamp": "2026-10-13T21:18:38.033144+00:00",
+    "event": "agent_run_failed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "28d77dc08035455687b77df5abc88141",
+    "parent_run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "error_type": "TypeError",
+    "upstream_status_code": null
+  },
+  {
+    "timestamp": "2026-10-13T21:18:40.035385+00:00",
+    "event": "agent_run_failed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "bf534d936add4e89ad9da5ce02b5a1a7",
+    "parent_run_id": null,
+    "error_type": "UsageLimitExceeded",
+    "upstream_status_code": null
+  },
+  {
+    "timestamp": "2026-10-13T21:21:59.132839+00:00",
+    "event": "agent_run_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1
+  },
+  {
+    "timestamp": "2026-10-13T21:22:00.703358+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "tool_name": "get_ticket_101_tee_reprint_context",
+    "tool_args": {},
+    "mcp_call_number": 1
+  },
+  {
+    "timestamp": "2026-10-13T21:22:00.763872+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "tool_name": "get_ticket_101_tee_reprint_context",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "related_records",
+        "ticket"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:00.981245+00:00",
+    "event": "agent_run_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "3b66fb34beab4a869c56efa55e203f8a",
+    "parent_run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "delegation_depth": 1,
+    "agent_run_number": 2
+  },
+  {
+    "timestamp": "2026-10-13T21:22:00.983277+00:00",
+    "event": "agent_run_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "parent_run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "delegation_depth": 1,
+    "agent_run_number": 3
+  },
+  {
+    "timestamp": "2026-10-13T21:22:00.983974+00:00",
+    "event": "agent_run_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "43daad85546d4a7fa43f122305dd73b9",
+    "parent_run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "delegation_depth": 1,
+    "agent_run_number": 4
+  },
+  {
+    "timestamp": "2026-10-13T21:22:00.984681+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 2
+  },
+  {
+    "timestamp": "2026-10-13T21:22:00.997688+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.198946+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "3b66fb34beab4a869c56efa55e203f8a",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "mcp_call_number": 3
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.206265+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "3b66fb34beab4a869c56efa55e203f8a",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.316126+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "43daad85546d4a7fa43f122305dd73b9",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 4
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.325746+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "43daad85546d4a7fa43f122305dd73b9",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.448763+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "3b66fb34beab4a869c56efa55e203f8a",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 5
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.449740+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 6
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.458158+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "3b66fb34beab4a869c56efa55e203f8a",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.460227+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.671418+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "43daad85546d4a7fa43f122305dd73b9",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "mcp_call_number": 7
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.672832+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "43daad85546d4a7fa43f122305dd73b9",
+    "tool_name": "get_invoice_status_for_ticket",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 8
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.681761+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "43daad85546d4a7fa43f122305dd73b9",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.685033+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "43daad85546d4a7fa43f122305dd73b9",
+    "tool_name": "get_invoice_status_for_ticket",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "due_date",
+        "invoice_id",
+        "status",
+        "ticket_id"
+      ],
+      "ticket_id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.695758+00:00",
+    "event": "agent_run_failed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "3b66fb34beab4a869c56efa55e203f8a",
+    "parent_run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "error_type": "TypeError",
+    "upstream_status_code": null
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.711731+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "mcp_call_number": 9
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.718594+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "cash_accounts",
+        "invoices",
+        "payments"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.880202+00:00",
+    "event": "agent_run_failed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "43daad85546d4a7fa43f122305dd73b9",
+    "parent_run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "error_type": "TypeError",
+    "upstream_status_code": null
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.940481+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 10
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.941515+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "mcp_call_number": 11
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.942027+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE"
+    },
+    "mcp_call_number": 12
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.950967+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.954088+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE"
+    },
+    "result_summary": {
+      "keys": [
+        "list_price",
+        "sku",
+        "unit_cost"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:01.955490+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "open_unpaid_invoices",
+        "shipping_hold",
+        "vendor_found",
+        "vendor_id"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:22:06.448808+00:00",
+    "event": "agent_run_failed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "2d478cdca9d74940989b30b5fc6dece9",
+    "parent_run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "error_type": "TypeError",
+    "upstream_status_code": null
+  },
+  {
+    "timestamp": "2026-10-13T21:22:08.580993+00:00",
+    "event": "agent_run_failed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "63fdc439cbdd469dbd3034d7e1490ece",
+    "parent_run_id": null,
+    "error_type": "UsageLimitExceeded",
+    "upstream_status_code": null
+  },
+  {
+    "timestamp": "2026-10-13T21:27:48.567404+00:00",
+    "event": "agent_run_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1
+  },
+  {
+    "timestamp": "2026-10-13T21:27:49.805446+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "tool_name": "get_ticket_101_tee_reprint_context",
+    "tool_args": {},
+    "mcp_call_number": 1
+  },
+  {
+    "timestamp": "2026-10-13T21:27:49.866410+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "tool_name": "get_ticket_101_tee_reprint_context",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "related_records",
+        "ticket"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.164489+00:00",
+    "event": "agent_run_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "038c593c19664430944c6cba2111e8dc",
+    "parent_run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "delegation_depth": 1,
+    "agent_run_number": 2
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.166630+00:00",
+    "event": "agent_run_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "parent_run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "delegation_depth": 1,
+    "agent_run_number": 3
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.167386+00:00",
+    "event": "agent_run_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "842dc16d0c9d41899a3d6dbeac7d72d3",
+    "parent_run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "delegation_depth": 1,
+    "agent_run_number": 4
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.168013+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 2
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.180498+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.405372+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "038c593c19664430944c6cba2111e8dc",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "mcp_call_number": 3
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.415411+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "038c593c19664430944c6cba2111e8dc",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.447460+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 4
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.455621+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.494745+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "842dc16d0c9d41899a3d6dbeac7d72d3",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 5
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.499520+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "842dc16d0c9d41899a3d6dbeac7d72d3",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.686486+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "038c593c19664430944c6cba2111e8dc",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 6
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.693068+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "038c593c19664430944c6cba2111e8dc",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.785428+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "842dc16d0c9d41899a3d6dbeac7d72d3",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "mcp_call_number": 7
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.786537+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "842dc16d0c9d41899a3d6dbeac7d72d3",
+    "tool_name": "get_invoice_status_for_ticket",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 8
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.795376+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "842dc16d0c9d41899a3d6dbeac7d72d3",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.798282+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "842dc16d0c9d41899a3d6dbeac7d72d3",
+    "tool_name": "get_invoice_status_for_ticket",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "due_date",
+        "invoice_id",
+        "status",
+        "ticket_id"
+      ],
+      "ticket_id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.916011+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "mcp_call_number": 9
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.925170+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "cash_accounts",
+        "invoices",
+        "payments"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:50.961848+00:00",
+    "event": "agent_run_failed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "038c593c19664430944c6cba2111e8dc",
+    "parent_run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "error_type": "TypeError",
+    "upstream_status_code": null,
+    "usage_limit_name": null,
+    "error_site": "agents.py:350:run_agent"
+  },
+  {
+    "timestamp": "2026-10-13T21:27:51.001216+00:00",
+    "event": "agent_run_failed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "842dc16d0c9d41899a3d6dbeac7d72d3",
+    "parent_run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "error_type": "TypeError",
+    "upstream_status_code": null,
+    "usage_limit_name": null,
+    "error_site": "agents.py:350:run_agent"
+  },
+  {
+    "timestamp": "2026-10-13T21:27:51.212065+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 10
+  },
+  {
+    "timestamp": "2026-10-13T21:27:51.213048+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "mcp_call_number": 11
+  },
+  {
+    "timestamp": "2026-10-13T21:27:51.213476+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE"
+    },
+    "mcp_call_number": 12
+  },
+  {
+    "timestamp": "2026-10-13T21:27:51.222524+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:51.224823+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "open_unpaid_invoices",
+        "shipping_hold",
+        "vendor_found",
+        "vendor_id"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:51.227222+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE"
+    },
+    "result_summary": {
+      "keys": [
+        "list_price",
+        "sku",
+        "unit_cost"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:51.817918+00:00",
+    "event": "agent_run_failed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "6258923b91fb441db33611942574b8d5",
+    "parent_run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "error_type": "TypeError",
+    "upstream_status_code": null,
+    "usage_limit_name": null,
+    "error_site": "agents.py:350:run_agent"
+  },
+  {
+    "timestamp": "2026-10-13T21:27:52.052429+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "tool_name": "get_invoice_status_for_ticket",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 13
+  },
+  {
+    "timestamp": "2026-10-13T21:27:52.053786+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "mcp_call_number": 14
+  },
+  {
+    "timestamp": "2026-10-13T21:27:52.054399+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "mcp_call_number": 15
+  },
+  {
+    "timestamp": "2026-10-13T21:27:52.062112+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "tool_name": "get_invoice_status_for_ticket",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "due_date",
+        "invoice_id",
+        "status",
+        "ticket_id"
+      ],
+      "ticket_id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:52.063718+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "open_unpaid_invoices",
+        "shipping_hold",
+        "vendor_found",
+        "vendor_id"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:52.064457+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-13T21:27:57.532629+00:00",
+    "event": "agent_run_failed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "b0e6fa90f1fe4560a97b64993d174fa7",
+    "parent_run_id": null,
+    "error_type": "TypeError",
+    "upstream_status_code": null,
+    "usage_limit_name": null,
+    "error_site": "agents.py:350:run_agent"
+  },
+  {
+    "timestamp": "2026-10-14T00:33:24.821174+00:00",
+    "event": "agent_run_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.138757+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "tool_name": "get_ticket_101_tee_reprint_context",
+    "tool_args": {},
+    "mcp_call_number": 1
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.211274+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "tool_name": "get_ticket_101_tee_reprint_context",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "related_records",
+        "ticket"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.433388+00:00",
+    "event": "agent_run_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "e8480e1d43e94cec860fc2240aa6d556",
+    "parent_run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "delegation_depth": 1,
+    "agent_run_number": 2
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.434435+00:00",
+    "event": "agent_run_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "parent_run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "delegation_depth": 1,
+    "agent_run_number": 3
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.434819+00:00",
+    "event": "agent_run_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "cdda2ce480ac4c31ad030a33e549bc0d",
+    "parent_run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "delegation_depth": 1,
+    "agent_run_number": 4
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.435366+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 2
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.444433+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.682024+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "e8480e1d43e94cec860fc2240aa6d556",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "mcp_call_number": 3
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.691975+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "e8480e1d43e94cec860fc2240aa6d556",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.895541+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 4
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.901903+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "cdda2ce480ac4c31ad030a33e549bc0d",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 5
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.905727+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.908248+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "cdda2ce480ac4c31ad030a33e549bc0d",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.951524+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "e8480e1d43e94cec860fc2240aa6d556",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 6
+  },
+  {
+    "timestamp": "2026-10-14T00:33:26.956170+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "e8480e1d43e94cec860fc2240aa6d556",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.211825+00:00",
+    "event": "agent_run_completed",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "e8480e1d43e94cec860fc2240aa6d556",
+    "parent_run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "Recorded stock for [name redacted]-TEE-WHITE, size S is 0 units at [name redacted].",
+        "Ticket requests 1 unit, so fulfillment cannot proceed from recorded inventory.",
+        "Any restock purchase, inventory adjustment, or alternative fulfillment action requires human review and approval; no inventory was changed."
+      ],
+      "recommendation": "Escalate for a human-approved restock or alternate fulfillment decision. Do not promise shipment based on current stock.",
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 2,
+      "total_tokens": 3739
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.212652+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "cdda2ce480ac4c31ad030a33e549bc0d",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "mcp_call_number": 7
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.213077+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "cdda2ce480ac4c31ad030a33e549bc0d",
+    "tool_name": "get_invoice_status_for_ticket",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 8
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.222982+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "cdda2ce480ac4c31ad030a33e549bc0d",
+    "tool_name": "get_invoice_status_for_ticket",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "due_date",
+        "invoice_id",
+        "status",
+        "ticket_id"
+      ],
+      "ticket_id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.223903+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "cdda2ce480ac4c31ad030a33e549bc0d",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.251882+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "mcp_call_number": 9
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.258391+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "cash_accounts",
+        "invoices",
+        "payments"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.455148+00:00",
+    "event": "agent_run_completed",
+    "agent": "customer_service",
+    "ticket_id": 101,
+    "run_id": "cdda2ce480ac4c31ad030a33e549bc0d",
+    "parent_run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "The requested [name redacted] ([name redacted]-TEE-WHITE), size S, quantity 1 has recorded stock of 0 at [name redacted].",
+        "The ticket-linked invoice is recorded as open; shipment must not be promised while the invoice is open.",
+        "No verified replacement item, restock date, or shipment date is available."
+      ],
+      "recommendation": "Escalate for human review to determine whether the open invoice should be handled and whether an approved alternative, backorder, or refund path is available. Do not promise shipment or make inventory or payment changes.",
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 3,
+      "total_tokens": 3893
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.499040+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 10
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.499730+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "mcp_call_number": 11
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.500168+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE"
+    },
+    "mcp_call_number": 12
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.509219+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.513157+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "open_unpaid_invoices",
+        "shipping_hold",
+        "vendor_found",
+        "vendor_id"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.513514+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE"
+    },
+    "result_summary": {
+      "keys": [
+        "list_price",
+        "sku",
+        "unit_cost"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:27.761932+00:00",
+    "event": "agent_run_completed",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "8f7414ba03e44ab59f705921bed85931",
+    "parent_run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "Invoice 501 is open and unpaid, with a due date of 2026-08-28; shop date is 2026-08-31, so it is overdue.",
+        "Vendor shipping status confirms a shipping hold caused by open unpaid invoice 501. A new-product shipment is blocked until the hold is resolved.",
+        "Recorded pricing for CC-TEE-WHITE is unit cost [amount redacted] and list price [amount redacted], indicating positive unit margin; no separate purchase order is supported by the available evidence."
+      ],
+      "recommendation": "Do not ship while the vendor hold remains. Prepare a payment proposal for human review to resolve invoice 501; do not execute payment. After human-approved payment and confirmation that the shipping hold is cleared, reassess shipment eligibility.",
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 4,
+      "tool_calls": 5,
+      "total_tokens": 5682
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:33.950933+00:00",
+    "event": "agent_run_completed",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "parent_run_id": null,
+    "output_type": "BossReport",
+    "human_approval_required": true,
+    "decision_count": 1,
+    "agent_statement": {
+      "decisions": [
+        {
+          "ticket_id": 101,
+          "summary": "Do not ship or promise shipment. The requested size-S tee has no recorded stock, and the linked vendor invoice is open, unpaid, and overdue as of the shop date. The vendor shipping hold therefore blocks a new-product shipment.",
+          "specialist_findings": [
+            {
+              "agent": "inventory",
+              "status": "needs_human_review",
+              "findings": [
+                "Recorded stock for [name redacted]-TEE-WHITE, size S is 0 units at [name redacted].",
+                "The requested quantity is 1, so current recorded inventory cannot fulfill the ticket."
+              ],
+              "recommendation": "Obtain human approval for a restock or alternate-fulfillment decision; no inventory was changed."
+            },
+            {
+              "agent": "accounting",
+              "status": "needs_human_review",
+              "findings": [
+                "Invoice 501 is open and unpaid and was due 2026-08-28; the MCP shop date is 2026-08-31, so it is overdue.",
+                "The vendor shipping hold is active because of the open unpaid invoice."
+              ],
+              "recommendation": "A payment proposal may be prepared for human review, but payment must not be executed by the agent. Recheck the shipping hold after any human-approved resolution."
+            },
+            {
+              "agent": "customer_service",
+              "status": "needs_human_review",
+              "findings": [
+                "No verified replacement item, restock date, or shipment date is available.",
+                "Shipment cannot be promised while stock is unavailable and the invoice-linked shipping hold remains active."
+              ],
+              "recommendation": "Keep the customer communication as a draft pending a human decision on restock, alternative fulfillment, or another resolution."
+            }
+          ],
+          "recommendation": "Escalate for human review. Do not ship, alter inventory, place a purchase order, or execute payment. A human must decide whether to approve resolution of invoice 501 and separately approve restock or alternate fulfillment; then the shipping hold and inventory must be rechecked before any shipment decision.",
+          "unresolved_questions": [
+            "Whether a human will approve resolution of the overdue vendor invoice.",
+            "Whether a human will approve restock or an alternative fulfillment path.",
+            "Whether the vendor shipping hold clears after any approved invoice resolution."
+          ],
+          "human_approval_required": true
+        }
+      ],
+      "stopped_reason": null
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 5,
+      "total_tokens": 7315
+    }
+  },
+  {
+    "timestamp": "2026-10-14T00:33:33.954537+00:00",
+    "event": "ticket_resolved",
+    "ticket_id": 101,
+    "source": "agent_run_completed"
+  },
+  {
+    "timestamp": "2026-10-14T00:59:20.651882+00:00",
+    "event": "submission_audit_supplement",
+    "source_run_id": "1a04466d2a6d4cb887e54cc71679509c",
+    "ticket_id": 101,
+    "outcome": "The successful agent run and resolved ticket are recorded in earlier agent_run_completed and ticket_resolved events.",
+    "accounting_recommendation": "Prepare a payment proposal for human review to resolve invoice 501; do not execute payment.",
+    "approval_proposal": {
+      "action_type": "invoice_payment",
+      "invoice_id": 501,
+      "verified_invoice_total": 840.0,
+      "invoice_status_at_supplement": "open",
+      "amount_source": "current linked invoice record in data/campus_customs_new.db",
+      "original_agent_action_draft_retained": false
+    },
+    "human_approved": false,
+    "cash_change": 0.0,
+    "checking_balance_at_supplement": 3400.0,
+    "note": "Supplement records the verified invoice amount and cash outcome; it does not claim this was the exact amount or wording in the lost agent draft."
+  },
+  {
+    "timestamp": "2026-10-14T01:03:38.762102+00:00",
+    "event": "human_action_approved",
+    "action_type": "invoice_payment",
+    "ticket_id": null,
+    "invoice_id": 501,
+    "outcome": "recorded"
+  },
+  {
+    "timestamp": "2026-10-14T01:05:58.404141+00:00",
+    "event": "submission_cash_update",
+    "ticket_id": 101,
+    "invoice_id": 501,
+    "payment_record_id": 1,
+    "human_approved": true,
+    "approved_by_initials": "L",
+    "paid_at_shop_date": "2026-08-31",
+    "invoice_status_now": "paid",
+    "starting_checking_balance_after_reset": 3400.0,
+    "ticket_101_cash_change": -840.0,
+    "checking_balance_after_ticket_101": 2560.0,
+    "calculation": "3400.00 - 840.00 = 2560.00",
+    "source": "payment record and cash_accounts in data/campus_customs_new.db; starting balance from original reset database",
+    "chronology_note": "This later supplement records the human approval made after the earlier submission_audit_supplement, which correctly showed no payment at its own timestamp."
+  },
+  {
+    "timestamp": "2026-10-14T01:51:16.340424+00:00",
+    "event": "agent_run_started",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "5d9dac7839e3414cb7a603e20f16f7d9",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1
+  },
+  {
+    "timestamp": "2026-10-14T01:51:21.371021+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "5d9dac7839e3414cb7a603e20f16f7d9",
+    "tool_name": "get_ticket_102_rent_context",
+    "tool_args": {},
+    "mcp_call_number": 1
+  },
+  {
+    "timestamp": "2026-10-14T01:51:21.373891+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "5d9dac7839e3414cb7a603e20f16f7d9",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 2
+  },
+  {
+    "timestamp": "2026-10-14T01:51:21.375914+00:00",
+    "event": "agent_run_started",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "7256e328389c4bf19e4b36ee0d64d11d",
+    "parent_run_id": "5d9dac7839e3414cb7a603e20f16f7d9",
+    "delegation_depth": 1,
+    "agent_run_number": 2
+  },
+  {
+    "timestamp": "2026-10-14T01:51:21.379264+00:00",
+    "event": "agent_run_started",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "c2316ce3078248458e9a87d922aefad1",
+    "parent_run_id": "5d9dac7839e3414cb7a603e20f16f7d9",
+    "delegation_depth": 1,
+    "agent_run_number": 3
+  },
+  {
+    "timestamp": "2026-10-14T01:51:21.457320+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "5d9dac7839e3414cb7a603e20f16f7d9",
+    "tool_name": "get_ticket_102_rent_context",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "related_records",
+        "ticket"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:21.458835+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "5d9dac7839e3414cb7a603e20f16f7d9",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:23.123382+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "7256e328389c4bf19e4b36ee0d64d11d",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 102
+    },
+    "mcp_call_number": 3
+  },
+  {
+    "timestamp": "2026-10-14T01:51:23.137224+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "7256e328389c4bf19e4b36ee0d64d11d",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 102
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 102,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:24.842458+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "7256e328389c4bf19e4b36ee0d64d11d",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 4
+  },
+  {
+    "timestamp": "2026-10-14T01:51:24.845810+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "7256e328389c4bf19e4b36ee0d64d11d",
+    "tool_name": "get_lease_details",
+    "tool_args": {
+      "lease_id": 1
+    },
+    "mcp_call_number": 5
+  },
+  {
+    "timestamp": "2026-10-14T01:51:24.857866+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "7256e328389c4bf19e4b36ee0d64d11d",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:24.862876+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "7256e328389c4bf19e4b36ee0d64d11d",
+    "tool_name": "get_lease_details",
+    "tool_args": {
+      "lease_id": 1
+    },
+    "result_summary": {
+      "keys": [
+        "id",
+        "landlord",
+        "monthly_rent",
+        "next_due",
+        "notes",
+        "space_name"
+      ],
+      "id": 1
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:27.512792+00:00",
+    "event": "agent_run_completed",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "7256e328389c4bf19e4b36ee0d64d11d",
+    "parent_run_id": "5d9dac7839e3414cb7a603e20f16f7d9",
+    "output_type": "AgentFinding",
+    "human_approval_required": false,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "complete",
+      "findings": [
+        "The linked lease records monthly rent of [amount redacted] with the next rent due on 2026-09-02.",
+        "The shop date is 2026-08-31, so the rent deadline is not overdue as of that date."
+      ],
+      "recommendation": "No overdue escalation is indicated. Monitor the 2026-09-02 deadline and route any rent payment for human review and approval; no action was taken.",
+      "action_draft": null,
+      "human_approval_required": false
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 3,
+      "total_tokens": 3669
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:27.560871+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "c2316ce3078248458e9a87d922aefad1",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 102
+    },
+    "mcp_call_number": 6
+  },
+  {
+    "timestamp": "2026-10-14T01:51:27.563994+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "c2316ce3078248458e9a87d922aefad1",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 7
+  },
+  {
+    "timestamp": "2026-10-14T01:51:27.566713+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "c2316ce3078248458e9a87d922aefad1",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "mcp_call_number": 8
+  },
+  {
+    "timestamp": "2026-10-14T01:51:27.581409+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "c2316ce3078248458e9a87d922aefad1",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 102
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 102,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:27.583911+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "c2316ce3078248458e9a87d922aefad1",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:27.587769+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "c2316ce3078248458e9a87d922aefad1",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "cash_accounts",
+        "invoices",
+        "payments"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:29.161924+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "c2316ce3078248458e9a87d922aefad1",
+    "tool_name": "get_lease_details",
+    "tool_args": {
+      "lease_id": 1
+    },
+    "mcp_call_number": 9
+  },
+  {
+    "timestamp": "2026-10-14T01:51:29.182499+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "c2316ce3078248458e9a87d922aefad1",
+    "tool_name": "get_lease_details",
+    "tool_args": {
+      "lease_id": 1
+    },
+    "result_summary": {
+      "keys": [
+        "id",
+        "landlord",
+        "monthly_rent",
+        "next_due",
+        "notes",
+        "space_name"
+      ],
+      "id": 1
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:32.998384+00:00",
+    "event": "agent_run_completed",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "c2316ce3078248458e9a87d922aefad1",
+    "parent_run_id": "5d9dac7839e3414cb7a603e20f16f7d9",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "The linked lease obligation is monthly rent of [amount redacted] with the next due date recorded as 2026-09-02.",
+        "The shop date is 2026-08-31, so the rent is not overdue under the recorded date.",
+        "No recorded rent payment or rent-specific invoice was available in the accounting snapshot. The only recorded payment is an [amount redacted] invoice payment made on 2026-08-31.",
+        "The [account detail redacted] is [amount redacted] which would leave [amount redacted] after a [amount redacted] rent payment, before any other obligations."
+      ],
+      "recommendation": "Human review and approval are required before any payment. Confirm that the lease obligation is intended for payment and that retaining [amount redacted] in checking is acceptable; do not treat the rent as paid until a human-approved payment is recorded.",
+      "action_draft": "Proposed payment for human approval: $2,400 from checking against lease 1, due 2026-09-02. This is a draft only; no payment was made or approved by the agent.",
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 4,
+      "total_tokens": 4729
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:36.466426+00:00",
+    "event": "agent_run_completed",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "5d9dac7839e3414cb7a603e20f16f7d9",
+    "parent_run_id": null,
+    "output_type": "BossReport",
+    "human_approval_required": true,
+    "decision_count": 1,
+    "agent_statement": {
+      "decisions": [
+        {
+          "ticket_id": 102,
+          "summary": "Rent is due on 2026-09-02 and is not overdue as of the shop date, 2026-08-31. No payment was made or approved.",
+          "specialist_findings": [
+            {
+              "agent": "facilities",
+              "status": "complete",
+              "findings": [
+                "The linked lease records monthly rent of [amount redacted] due 2026-09-02.",
+                "The deadline is not overdue as of 2026-08-31."
+              ],
+              "recommendation": "Monitor the due date; no overdue escalation is needed."
+            },
+            {
+              "agent": "accounting",
+              "status": "needs_human_review",
+              "findings": [
+                "No recorded rent payment or rent-specific invoice was available in the accounting snapshot.",
+                "The recorded [account detail redacted] is [amount redacted] before any proposed rent payment."
+              ],
+              "recommendation": "Have a human confirm and approve any rent payment before it is made."
+            }
+          ],
+          "recommendation": "Keep ticket 102 open for monitoring until the 2026-09-02 rent deadline. If payment is desired, a human must review and approve the [amount redacted] payment proposal; do not represent the rent as paid without recorded evidence.",
+          "action_draft": "Draft for human review only: $2,400 rent payment from checking against lease 1, due 2026-09-02. No external communication or payment action was taken.",
+          "unresolved_questions": [],
+          "human_approval_required": true
+        }
+      ],
+      "stopped_reason": null
+    },
+    "usage": {
+      "requests": 2,
+      "tool_calls": 4,
+      "total_tokens": 4802
+    }
+  },
+  {
+    "timestamp": "2026-10-14T01:51:36.474146+00:00",
+    "event": "ticket_resolved",
+    "ticket_id": 102,
+    "source": "agent_run_completed"
+  },
+  {
+    "timestamp": "2026-10-14T02:14:28.600339+00:00",
+    "event": "human_action_approved",
+    "action_type": "rent_payment",
+    "ticket_id": 102,
+    "invoice_id": null,
+    "lease_id": 1,
+    "outcome": "recorded"
+  },
+  {
+    "timestamp": "2026-10-14T02:26:27.167611+00:00",
+    "event": "agent_run_started",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "9175eacda1f747178ed8771ba91652e8",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1
+  },
+  {
+    "timestamp": "2026-10-14T02:26:30.723969+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "9175eacda1f747178ed8771ba91652e8",
+    "tool_name": "get_ticket_103_bulk_hoodie_context",
+    "tool_args": {},
+    "mcp_call_number": 1
+  },
+  {
+    "timestamp": "2026-10-14T02:26:30.794333+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "9175eacda1f747178ed8771ba91652e8",
+    "tool_name": "get_ticket_103_bulk_hoodie_context",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "related_records",
+        "ticket"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:34.178852+00:00",
+    "event": "agent_run_started",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2655b797dde412ebb7befe76f29f703",
+    "parent_run_id": "9175eacda1f747178ed8771ba91652e8",
+    "delegation_depth": 1,
+    "agent_run_number": 2
+  },
+  {
+    "timestamp": "2026-10-14T02:26:34.182012+00:00",
+    "event": "agent_run_started",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "df29b3d545ca4a7eaba106b0e4e80772",
+    "parent_run_id": "9175eacda1f747178ed8771ba91652e8",
+    "delegation_depth": 1,
+    "agent_run_number": 3
+  },
+  {
+    "timestamp": "2026-10-14T02:26:34.184262+00:00",
+    "event": "agent_run_started",
+    "agent": "customer_service",
+    "ticket_id": 103,
+    "run_id": "1620c537fc2d4cdaa23c420e7ba62355",
+    "parent_run_id": "9175eacda1f747178ed8771ba91652e8",
+    "delegation_depth": 1,
+    "agent_run_number": 4
+  },
+  {
+    "timestamp": "2026-10-14T02:26:35.652648+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "df29b3d545ca4a7eaba106b0e4e80772",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "mcp_call_number": 2
+  },
+  {
+    "timestamp": "2026-10-14T02:26:35.665348+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "df29b3d545ca4a7eaba106b0e4e80772",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 103,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:35.829879+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2655b797dde412ebb7befe76f29f703",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY",
+      "size": "M"
+    },
+    "mcp_call_number": 3
+  },
+  {
+    "timestamp": "2026-10-14T02:26:35.840725+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2655b797dde412ebb7befe76f29f703",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY",
+      "size": "M"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:36.217773+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 103,
+    "run_id": "1620c537fc2d4cdaa23c420e7ba62355",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "mcp_call_number": 4
+  },
+  {
+    "timestamp": "2026-10-14T02:26:36.227828+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 103,
+    "run_id": "1620c537fc2d4cdaa23c420e7ba62355",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 103,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:37.473049+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "df29b3d545ca4a7eaba106b0e4e80772",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY"
+    },
+    "mcp_call_number": 5
+  },
+  {
+    "timestamp": "2026-10-14T02:26:37.486069+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "df29b3d545ca4a7eaba106b0e4e80772",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY"
+    },
+    "result_summary": {
+      "keys": [
+        "list_price",
+        "sku",
+        "unit_cost"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:38.089105+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 103,
+    "run_id": "1620c537fc2d4cdaa23c420e7ba62355",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY",
+      "size": "M"
+    },
+    "mcp_call_number": 6
+  },
+  {
+    "timestamp": "2026-10-14T02:26:38.093556+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "customer_service",
+    "ticket_id": 103,
+    "run_id": "1620c537fc2d4cdaa23c420e7ba62355",
+    "tool_name": "get_customer_list_price",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY"
+    },
+    "mcp_call_number": 7
+  },
+  {
+    "timestamp": "2026-10-14T02:26:38.105389+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 103,
+    "run_id": "1620c537fc2d4cdaa23c420e7ba62355",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY",
+      "size": "M"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:38.110356+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "customer_service",
+    "ticket_id": 103,
+    "run_id": "1620c537fc2d4cdaa23c420e7ba62355",
+    "tool_name": "get_customer_list_price",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY"
+    },
+    "result_summary": {
+      "keys": [
+        "list_price",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:38.124083+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2655b797dde412ebb7befe76f29f703",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "mcp_call_number": 8
+  },
+  {
+    "timestamp": "2026-10-14T02:26:38.126796+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2655b797dde412ebb7befe76f29f703",
+    "tool_name": "list_vendors",
+    "tool_args": {},
+    "mcp_call_number": 9
+  },
+  {
+    "timestamp": "2026-10-14T02:26:38.133484+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2655b797dde412ebb7befe76f29f703",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 103,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:38.137231+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2655b797dde412ebb7befe76f29f703",
+    "tool_name": "list_vendors",
+    "tool_args": {},
+    "result_summary": {
+      "record_count": 3
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:40.673852+00:00",
+    "event": "agent_run_completed",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "df29b3d545ca4a7eaba106b0e4e80772",
+    "parent_run_id": "9175eacda1f747178ed8771ba91652e8",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "The recorded unit cost for [name redacted]-HOOD-NAVY is [amount redacted], and the recorded list price is [amount redacted].",
+        "At list price, the gross profit is [amount redacted] per hoodie and the gross margin is approximately 62.1%. For 20 units, list-price revenue would be [amount redacted], cost would be [amount redacted], and gross profit would be [amount redacted].",
+        "The ticket does not include the requested override price, so the discounted revenue, gross profit, and margin cannot be calculated from the available evidence."
+      ],
+      "recommendation": "Obtain the proposed override price and have a human review and approve any price change. Do not alter or approve pricing in this run.",
+      "action_draft": "Human-review proposal only: evaluate a bulk price override for 20 units of CC-HOOD-NAVY after the proposed per-unit override price is supplied; compare it with the $22.00 unit cost and confirm the resulting margin before approval.",
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 2,
+      "total_tokens": 4125
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:41.407204+00:00",
+    "event": "agent_run_completed",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2655b797dde412ebb7befe76f29f703",
+    "parent_run_id": "9175eacda1f747178ed8771ba91652e8",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "Recorded stock for [name redacted]-HOOD-NAVY, size M is 8 units in [name redacted].",
+        "Requested quantity is 20 units, leaving a shortfall of 12 units for complete fulfillment.",
+        "Ticket 103 is an open price-override ticket for this SKU and quantity; no linked invoice is recorded.",
+        "[name redacted] is a possible restock candidate based on its recorded apparel-reprint specialty and 5-day lead time, but no database record verifies it for this SKU. [name redacted] and [name redacted] do not match the recorded apparel specialty."
+      ],
+      "recommendation": "Complete fulfillment is not feasible from recorded stock alone. Escalate the 12-unit shortfall for human review; any purchase or restock proposal requires human approval, and vendor capability and delivery quantity must be verified before relying on it.",
+      "action_draft": "Human-review draft: investigate sourcing 12 additional CC-HOOD-NAVY, size M units, with [name redacted] as an unverified candidate only. Do not place an order or alter inventory records.",
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 3,
+      "total_tokens": 4642
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:41.932859+00:00",
+    "event": "agent_run_completed",
+    "agent": "customer_service",
+    "ticket_id": 103,
+    "run_id": "1620c537fc2d4cdaa23c420e7ba62355",
+    "parent_run_id": "9175eacda1f747178ed8771ba91652e8",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "The request is for 20 units of [name redacted]-HOOD-NAVY in size M.",
+        "Recorded stock is 8 units in [name redacted], so the requested quantity is not currently supported by recorded inventory.",
+        "The recorded list price is [amount redacted] per hoodie.",
+        "The ticket is an open price-override request; no invoice is linked, so shipping or fulfillment should not be promised."
+      ],
+      "recommendation": "A human must review and approve any discount or price override. Inventory or purchasing review is also needed before confirming whether the full quantity can be supplied. Keep the customer communication limited to acknowledging the request and stating that pricing and quantity are under review.",
+      "action_draft": "Human review is required for the requested price override. A separate inventory or purchasing decision is needed before confirming the full quantity.",
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 3,
+      "total_tokens": 4079
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:26:51.667390+00:00",
+    "event": "agent_run_failed",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "9175eacda1f747178ed8771ba91652e8",
+    "parent_run_id": null,
+    "error_type": "UsageLimitExceeded",
+    "upstream_status_code": null,
+    "usage_limit_name": "total_tokens_limit",
+    "error_site": "usage.py:626:check_tokens"
+  },
+  {
+    "timestamp": "2026-10-14T02:35:50.642373+00:00",
+    "event": "agent_run_started",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "47d5701545784a52be474c1688d5c05c",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1,
+    "total_tokens_limit": 16000
+  },
+  {
+    "timestamp": "2026-10-14T02:35:56.178337+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "47d5701545784a52be474c1688d5c05c",
+    "tool_name": "get_ticket_103_bulk_hoodie_context",
+    "tool_args": {},
+    "mcp_call_number": 1
+  },
+  {
+    "timestamp": "2026-10-14T02:35:56.181624+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "47d5701545784a52be474c1688d5c05c",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 2
+  },
+  {
+    "timestamp": "2026-10-14T02:35:56.184172+00:00",
+    "event": "agent_run_started",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "7188011d8d094eff9a2c0ab9851a861a",
+    "parent_run_id": "47d5701545784a52be474c1688d5c05c",
+    "delegation_depth": 1,
+    "agent_run_number": 2,
+    "total_tokens_limit": 12000
+  },
+  {
+    "timestamp": "2026-10-14T02:35:56.187052+00:00",
+    "event": "agent_run_started",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "91eb0680f176434cb6e00111d3a17c0b",
+    "parent_run_id": "47d5701545784a52be474c1688d5c05c",
+    "delegation_depth": 1,
+    "agent_run_number": 3,
+    "total_tokens_limit": 12000
+  },
+  {
+    "timestamp": "2026-10-14T02:35:56.248248+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "47d5701545784a52be474c1688d5c05c",
+    "tool_name": "get_ticket_103_bulk_hoodie_context",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "related_records",
+        "ticket"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:35:56.249735+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "47d5701545784a52be474c1688d5c05c",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:35:58.001560+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "7188011d8d094eff9a2c0ab9851a861a",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "mcp_call_number": 3
+  },
+  {
+    "timestamp": "2026-10-14T02:35:58.013262+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "7188011d8d094eff9a2c0ab9851a861a",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 103,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:35:58.206328+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "91eb0680f176434cb6e00111d3a17c0b",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "mcp_call_number": 4
+  },
+  {
+    "timestamp": "2026-10-14T02:35:58.210496+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "91eb0680f176434cb6e00111d3a17c0b",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "mcp_call_number": 5
+  },
+  {
+    "timestamp": "2026-10-14T02:35:58.213681+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "91eb0680f176434cb6e00111d3a17c0b",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 6
+  },
+  {
+    "timestamp": "2026-10-14T02:35:58.224471+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "91eb0680f176434cb6e00111d3a17c0b",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 103,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:35:58.229926+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "91eb0680f176434cb6e00111d3a17c0b",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:35:58.232607+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "91eb0680f176434cb6e00111d3a17c0b",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "cash_accounts",
+        "invoices",
+        "payments"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:36:00.048323+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "91eb0680f176434cb6e00111d3a17c0b",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY"
+    },
+    "mcp_call_number": 7
+  },
+  {
+    "timestamp": "2026-10-14T02:36:00.060861+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "91eb0680f176434cb6e00111d3a17c0b",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY"
+    },
+    "result_summary": {
+      "keys": [
+        "list_price",
+        "sku",
+        "unit_cost"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:36:00.370966+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "7188011d8d094eff9a2c0ab9851a861a",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY",
+      "size": "M"
+    },
+    "mcp_call_number": 8
+  },
+  {
+    "timestamp": "2026-10-14T02:36:00.380270+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "7188011d8d094eff9a2c0ab9851a861a",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY",
+      "size": "M"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:36:03.001379+00:00",
+    "event": "mcp_tool_call_started",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "7188011d8d094eff9a2c0ab9851a861a",
+    "tool_name": "list_vendors",
+    "tool_args": {},
+    "mcp_call_number": 9
+  },
+  {
+    "timestamp": "2026-10-14T02:36:03.014647+00:00",
+    "event": "mcp_tool_call_completed",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "7188011d8d094eff9a2c0ab9851a861a",
+    "tool_name": "list_vendors",
+    "tool_args": {},
+    "result_summary": {
+      "record_count": 3
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:36:04.558951+00:00",
+    "event": "agent_run_completed",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "91eb0680f176434cb6e00111d3a17c0b",
+    "parent_run_id": "47d5701545784a52be474c1688d5c05c",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "Ticket 103 concerns a price override for 20 units of [name redacted]-HOOD-NAVY; no invoice or payment is attached.",
+        "Recorded unit cost is [amount redacted] and list price is [amount redacted]. At list price, the order totals [amount redacted], recorded cost totals [amount redacted], and gross margin is [amount redacted], or approximately 62.1%.",
+        "The discount can reduce the unit price by up to [amount redacted], to a floor of [amount redacted], before reaching recorded cost. Any price below [amount redacted] per unit would create a negative gross margin and requires escalation.",
+        "The accounting snapshot shows [amount redacted] in checking and no unpaid vendor invoice. No payment or purchase proposal is supported by the ticket evidence."
+      ],
+      "recommendation": "Obtain human approval for the requested price override after confirming the proposed unit price. Keep the price at or above [amount redacted] per unit unless a separately authorized margin exception is approved; no payment or purchase order should be prepared from the current evidence.",
+      "action_draft": "Human-review draft: approve or reject the price override for 20 units of CC-HOOD-NAVY after the proposed unit price is supplied. Financial guardrail: unit price must be at least $22.00 to avoid a negative margin. No payment or purchase order proposed.",
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 4,
+      "total_tokens": 4893
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:36:06.968087+00:00",
+    "event": "agent_run_completed",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "7188011d8d094eff9a2c0ab9851a861a",
+    "parent_run_id": "47d5701545784a52be474c1688d5c05c",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "Ticket 103 requests 20 units of [name redacted]-HOOD-NAVY in size M.",
+        "Recorded stock is 8 units at [name redacted], leaving a shortfall of 12 units for the requested quantity.",
+        "The ticket is a price-override request and has no linked invoice recorded, so no supplier or delivery commitment is established.",
+        "[name redacted] is a possible restock candidate based on its recorded apparel-reprint specialty and 5-day lead time, but the database does not verify that it supplies this SKU. Other recorded vendors specialize in mugs/small goods or local courier service."
+      ],
+      "recommendation": "Escalate the 12-unit shortage for human review. A human may assess a purchase proposal with the unverified [name redacted] candidate; do not promise shipment or alter inventory until supplier availability, quantity, terms, and approval are confirmed.",
+      "action_draft": "Human review draft: investigate sourcing 12 additional CC-HOOD-NAVY hoodies in size M, with [name redacted] as an unverified candidate based only on recorded specialty and lead time. No purchase has been placed.",
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 4,
+      "tool_calls": 3,
+      "total_tokens": 6140
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:36:12.624392+00:00",
+    "event": "agent_run_completed",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "47d5701545784a52be474c1688d5c05c",
+    "parent_run_id": null,
+    "output_type": "BossReport",
+    "human_approval_required": true,
+    "decision_count": 1,
+    "agent_statement": {
+      "decisions": [
+        {
+          "ticket_id": 103,
+          "summary": "Do not approve the bulk discount or promise fulfillment yet. The request is short 12 size-M hoodies, and the proposed unit price must be reviewed and approved by a human.",
+          "specialist_findings": [
+            {
+              "agent": "inventory",
+              "status": "needs_human_review",
+              "findings": [
+                "Recorded stock is 8 of the requested 20 units, leaving a 12-unit shortage.",
+                "A potential restock vendor and five-day lead time are recorded, but SKU availability is unverified; no purchase or delivery commitment exists."
+              ],
+              "recommendation": "Have a human verify sourcing, quantity, terms, and approval before committing to the shortage."
+            },
+            {
+              "agent": "accounting",
+              "status": "needs_human_review",
+              "findings": [
+                "The recorded unit cost is [amount redacted] and list price is [amount redacted]; the price override should not go below [amount redacted] without a separately authorized margin exception.",
+                "The ticket has no invoice or payment attached. Recorded checking is [amount redacted] while sourcing 12 replacement units at recorded cost would be [amount redacted] subject to vendor and terms confirmation."
+              ],
+              "recommendation": "Obtain human approval for the proposed unit price and any purchase; do not initiate payment or place an order."
+            }
+          ],
+          "recommendation": "Request the proposed discounted unit price, have a human approve the override, and separately verify and approve sourcing for the 12-unit shortage. Until both are resolved, hold fulfillment and make no external commitment.",
+          "action_draft": "Human-review draft: evaluate a price override for 20 CC-HOOD-NAVY size-M hoodies at a unit price of at least $22, and separately evaluate sourcing 12 additional units at an estimated recorded cost of $264. No payment, purchase, inventory change, or shipment has been authorized.",
+          "unresolved_questions": [],
+          "human_approval_required": true
+        }
+      ],
+      "stopped_reason": null
+    },
+    "usage": {
+      "requests": 2,
+      "tool_calls": 4,
+      "total_tokens": 4690
+    }
+  },
+  {
+    "timestamp": "2026-10-14T02:36:12.633542+00:00",
+    "event": "ticket_resolved",
+    "ticket_id": 103,
+    "source": "agent_run_completed"
+  },
+  {
+    "timestamp": "2026-10-14T19:59:41.023882+00:00",
+    "event": "model_configuration_changed",
+    "from_model": "gpt-5.6-luna",
+    "to_model": "gpt-6-luna",
+    "reason": "Project-level setup guidance named gpt-5.6-luna; the assignment requirement for gpt-6-luna was identified during the pre-submission review.",
+    "final_run_identification": "Use agent and MCP audit events marked model=gpt-6-luna as final model-compliant runs; earlier events without a model field are historical gpt-5.6-luna attempts."
+  },
+  {
+    "timestamp": "2026-10-14T19:59:41.399326+00:00",
+    "event": "database_reset",
+    "outcome": "restored_from_original",
+    "reason": "prepare_final_gpt-6-luna_runs",
+    "prepared_model": "gpt-6-luna"
+  },
+  {
+    "timestamp": "2026-10-14T20:09:35.223273+00:00",
+    "event": "agent_run_started",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "291fe000292e42b88c16b58aadb9e814",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1,
+    "total_tokens_limit": 16000
+  },
+  {
+    "timestamp": "2026-10-14T20:09:36.994779+00:00",
+    "event": "agent_run_failed",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "291fe000292e42b88c16b58aadb9e814",
+    "parent_run_id": null,
+    "error_type": "ModelHTTPError",
+    "upstream_status_code": 400,
+    "usage_limit_name": null,
+    "total_tokens_limit": 16000,
+    "error_site": "openai.py:240:_map_api_errors"
+  },
+  {
+    "timestamp": "2026-10-14T20:24:42.457680+00:00",
+    "event": "agent_run_started",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "a5e0b78f06414d50b89d64cc6079f450",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1,
+    "total_tokens_limit": 16000
+  },
+  {
+    "timestamp": "2026-10-14T20:24:44.174070+00:00",
+    "event": "agent_run_failed",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "a5e0b78f06414d50b89d64cc6079f450",
+    "parent_run_id": null,
+    "error_type": "ModelHTTPError",
+    "upstream_status_code": 400,
+    "usage_limit_name": null,
+    "total_tokens_limit": 16000,
+    "error_site": "openai.py:240:_map_api_errors",
+    "upstream_error_detail": "{\"message\": \"azure-openai error: Function tools with reasoning_effort are not supported for gpt-6-luna-global in /v1/chat/completions. To use function tools, use /v1/responses or set reasoning_effort to 'none'.\", \"type\": \"invalid_request_error\", \"param\": \"reasoning_effort\"}"
+  },
+  {
+    "timestamp": "2026-10-14T20:29:03.435304+00:00",
+    "event": "model_request_settings_updated",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "cause": "Azure Chat Completions rejects function tools when reasoning_effort is enabled; provider error explicitly recommends none or the Responses endpoint.",
+    "agent_calls_made": false
+  },
+  {
+    "timestamp": "2026-10-14T20:31:30.981544+00:00",
+    "event": "agent_run_started",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "92f538e1e28e44ff9df0bdaa33b6f215",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1,
+    "total_tokens_limit": 16000
+  },
+  {
+    "timestamp": "2026-10-14T20:31:36.510604+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "92f538e1e28e44ff9df0bdaa33b6f215",
+    "tool_name": "get_ticket_101_tee_reprint_context",
+    "tool_args": {},
+    "mcp_call_number": 1
+  },
+  {
+    "timestamp": "2026-10-14T20:31:36.514258+00:00",
+    "event": "agent_run_started",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "parent_run_id": "92f538e1e28e44ff9df0bdaa33b6f215",
+    "delegation_depth": 1,
+    "agent_run_number": 2,
+    "total_tokens_limit": 12000
+  },
+  {
+    "timestamp": "2026-10-14T20:31:36.517964+00:00",
+    "event": "agent_run_started",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "parent_run_id": "92f538e1e28e44ff9df0bdaa33b6f215",
+    "delegation_depth": 1,
+    "agent_run_number": 3,
+    "total_tokens_limit": 12000
+  },
+  {
+    "timestamp": "2026-10-14T20:31:36.521478+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "92f538e1e28e44ff9df0bdaa33b6f215",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 2
+  },
+  {
+    "timestamp": "2026-10-14T20:31:36.622079+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "92f538e1e28e44ff9df0bdaa33b6f215",
+    "tool_name": "get_ticket_101_tee_reprint_context",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "related_records",
+        "ticket"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:36.624098+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "92f538e1e28e44ff9df0bdaa33b6f215",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:38.119261+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 3
+  },
+  {
+    "timestamp": "2026-10-14T20:31:38.132598+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:39.059973+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 4
+  },
+  {
+    "timestamp": "2026-10-14T20:31:39.070977+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 101,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:40.086244+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "mcp_call_number": 5
+  },
+  {
+    "timestamp": "2026-10-14T20:31:40.090355+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "tool_name": "list_vendors",
+    "tool_args": {},
+    "mcp_call_number": 6
+  },
+  {
+    "timestamp": "2026-10-14T20:31:40.093953+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 7
+  },
+  {
+    "timestamp": "2026-10-14T20:31:40.107293+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "tool_name": "list_vendors",
+    "tool_args": {},
+    "result_summary": {
+      "record_count": 3
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:40.112043+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "tool_name": "get_accounting_snapshot",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "cash_accounts",
+        "invoices",
+        "payments"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:40.114787+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:40.615926+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "mcp_call_number": 8
+  },
+  {
+    "timestamp": "2026-10-14T20:31:40.620519+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "tool_name": "get_ticket_invoice_vendor_context",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "mcp_call_number": 9
+  },
+  {
+    "timestamp": "2026-10-14T20:31:40.632921+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-TEE-WHITE",
+      "size": "S"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:40.638450+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "tool_name": "get_ticket_invoice_vendor_context",
+    "tool_args": {
+      "ticket_id": 101
+    },
+    "result_summary": {
+      "keys": [
+        "invoice_description",
+        "invoice_id",
+        "invoice_status",
+        "ticket_id",
+        "vendor_id",
+        "vendor_lead_days",
+        "vendor_name",
+        "vendor_specialty"
+      ],
+      "ticket_id": 101
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:42.069258+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "mcp_call_number": 10
+  },
+  {
+    "timestamp": "2026-10-14T20:31:42.081938+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "open_unpaid_invoices",
+        "shipping_hold",
+        "vendor_found",
+        "vendor_id"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:42.284310+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "tool_name": "list_vendors",
+    "tool_args": {},
+    "mcp_call_number": 11
+  },
+  {
+    "timestamp": "2026-10-14T20:31:42.287964+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "mcp_call_number": 12
+  },
+  {
+    "timestamp": "2026-10-14T20:31:42.296569+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "tool_name": "list_vendors",
+    "tool_args": {},
+    "result_summary": {
+      "record_count": 3
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:42.300852+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "tool_name": "check_vendor_shipping_hold",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "open_unpaid_invoices",
+        "shipping_hold",
+        "vendor_found",
+        "vendor_id"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:44.696210+00:00",
+    "event": "agent_run_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 101,
+    "run_id": "ee8e8f34b1ba48cd837a6778c420618c",
+    "parent_run_id": "92f538e1e28e44ff9df0bdaa33b6f215",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "Ticket 101 links invoice 501 for the rush reprint; invoice 501 is open for [amount redacted] and no payment is recorded.",
+        "The shop date is 2026-08-31, and invoice 501 was due 2026-08-28, so it is overdue.",
+        "The vendor shipping-hold check confirms an active hold due to this open, unpaid invoice."
+      ],
+      "recommendation": "Do not approve shipment while the invoice remains open and unpaid. Escalate for human review; any payment must be prepared as a proposal and approved through the human process before shipment eligibility is reconsidered.",
+      "action_draft": null,
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 4,
+      "tool_calls": 5,
+      "total_tokens": 5844
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:44.886475+00:00",
+    "event": "agent_run_completed",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 101,
+    "run_id": "2d837846ef174c43adf294c540285363",
+    "parent_run_id": "92f538e1e28e44ff9df0bdaa33b6f215",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "Recorded on-hand stock for CC-TEE-WHITE, size S, is 0; the one-unit request cannot be fulfilled from current stock.",
+        "The linked invoice describes a rush reprint of this SKU and size and lists a supplier specializing in apparel reprints with a recorded five-day lead time, but the invoice link does not verify an order or delivery quantity.",
+        "The linked invoice is open and unpaid, and the supplier has a shipping hold. Shipment should not be recommended on this evidence.",
+        "The ticket summary contains no price information, so price context cannot be verified from available MCP records."
+      ],
+      "recommendation": "Escalate for human review to verify whether a reprint was actually ordered, confirm quantity and price, and resolve the open invoice/shipping hold before planning shipment. No inventory changes have been made.",
+      "action_draft": null,
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 4,
+      "tool_calls": 5,
+      "total_tokens": 6235
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:48.091762+00:00",
+    "event": "agent_run_completed",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 101,
+    "run_id": "92f538e1e28e44ff9df0bdaa33b6f215",
+    "parent_run_id": null,
+    "output_type": "BossReport",
+    "human_approval_required": true,
+    "decision_count": 1,
+    "agent_statement": {
+      "decisions": [
+        {
+          "ticket_id": 101,
+          "summary": "Do not approve shipment or fulfill the request from current stock. [name redacted] is out of stock, and the linked reprint invoice is open, unpaid, and overdue.",
+          "specialist_findings": [
+            {
+              "agent": "inventory",
+              "status": "needs_human_review",
+              "findings": [
+                "Recorded size-S stock is 0; the one-unit request cannot be fulfilled from stock.",
+                "The invoice reference alone does not verify an order or delivery quantity."
+              ],
+              "recommendation": "Verify whether the reprint was actually ordered and confirm quantity before planning fulfillment."
+            },
+            {
+              "agent": "accounting",
+              "status": "needs_human_review",
+              "findings": [
+                "Invoice 501 is open with no payment recorded and was due 2026-08-28; desk date is 2026-08-31.",
+                "The open invoice has an active vendor shipping hold."
+              ],
+              "recommendation": "Keep shipment blocked while unpaid; any payment proposal requires human review and approval."
+            }
+          ],
+          "recommendation": "Escalate for human review to verify the reprint order and quantity and resolve the invoice and shipping hold. Reconsider fulfillment only after stock/delivery is confirmed and the invoice is no longer open and unpaid; no payment, order, or shipment action has been taken.",
+          "action_draft": null,
+          "unresolved_questions": [
+            "Was the reprint actually ordered, and what quantity and delivery status are confirmed?"
+          ],
+          "human_approval_required": true
+        }
+      ],
+      "stopped_reason": null
+    },
+    "usage": {
+      "requests": 2,
+      "tool_calls": 4,
+      "total_tokens": 4096
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:31:48.099123+00:00",
+    "event": "ticket_resolved",
+    "model": "gpt-6-luna",
+    "ticket_id": 101,
+    "source": "agent_run_completed"
+  },
+  {
+    "timestamp": "2026-10-14T20:41:28.722091+00:00",
+    "event": "human_action_approved",
+    "action_type": "invoice_payment",
+    "ticket_id": null,
+    "invoice_id": 501,
+    "lease_id": null,
+    "outcome": "recorded"
+  },
+  {
+    "timestamp": "2026-10-14T20:42:02.204768+00:00",
+    "event": "agent_run_started",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "4bca5471383640ffa5cca606a07a8487",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1,
+    "total_tokens_limit": 16000
+  },
+  {
+    "timestamp": "2026-10-14T20:42:05.882364+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "4bca5471383640ffa5cca606a07a8487",
+    "tool_name": "get_ticket_102_rent_context",
+    "tool_args": {},
+    "mcp_call_number": 1
+  },
+  {
+    "timestamp": "2026-10-14T20:42:05.886342+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "4bca5471383640ffa5cca606a07a8487",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 2
+  },
+  {
+    "timestamp": "2026-10-14T20:42:05.889635+00:00",
+    "event": "agent_run_started",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "5d6fd2ff61b24b0484f1ef8297158354",
+    "parent_run_id": "4bca5471383640ffa5cca606a07a8487",
+    "delegation_depth": 1,
+    "agent_run_number": 2,
+    "total_tokens_limit": 12000
+  },
+  {
+    "timestamp": "2026-10-14T20:42:05.893047+00:00",
+    "event": "agent_run_started",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "29f2b6187c8444308f559d662f6e27b0",
+    "parent_run_id": "4bca5471383640ffa5cca606a07a8487",
+    "delegation_depth": 1,
+    "agent_run_number": 3,
+    "total_tokens_limit": 12000
+  },
+  {
+    "timestamp": "2026-10-14T20:42:05.964774+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "4bca5471383640ffa5cca606a07a8487",
+    "tool_name": "get_ticket_102_rent_context",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "related_records",
+        "ticket"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:05.966652+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "4bca5471383640ffa5cca606a07a8487",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:07.918540+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "5d6fd2ff61b24b0484f1ef8297158354",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 102
+    },
+    "mcp_call_number": 3
+  },
+  {
+    "timestamp": "2026-10-14T20:42:07.923789+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "5d6fd2ff61b24b0484f1ef8297158354",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 4
+  },
+  {
+    "timestamp": "2026-10-14T20:42:07.927652+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "5d6fd2ff61b24b0484f1ef8297158354",
+    "tool_name": "get_lease_details",
+    "tool_args": {
+      "lease_id": 102
+    },
+    "mcp_call_number": 5
+  },
+  {
+    "timestamp": "2026-10-14T20:42:07.940940+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "5d6fd2ff61b24b0484f1ef8297158354",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 102
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 102,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:07.946227+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "5d6fd2ff61b24b0484f1ef8297158354",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:07.949094+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "5d6fd2ff61b24b0484f1ef8297158354",
+    "tool_name": "get_lease_details",
+    "tool_args": {
+      "lease_id": 102
+    },
+    "result_summary": {
+      "result_type": "NoneType",
+      "has_result": false
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:08.386194+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "29f2b6187c8444308f559d662f6e27b0",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 102
+    },
+    "mcp_call_number": 6
+  },
+  {
+    "timestamp": "2026-10-14T20:42:08.397211+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "29f2b6187c8444308f559d662f6e27b0",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 102
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 102,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:09.272930+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "5d6fd2ff61b24b0484f1ef8297158354",
+    "tool_name": "get_lease_details",
+    "tool_args": {
+      "lease_id": 1
+    },
+    "mcp_call_number": 7
+  },
+  {
+    "timestamp": "2026-10-14T20:42:09.278273+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "5d6fd2ff61b24b0484f1ef8297158354",
+    "tool_name": "get_lease_details",
+    "tool_args": {
+      "lease_id": 1
+    },
+    "result_summary": {
+      "keys": [
+        "id",
+        "landlord",
+        "monthly_rent",
+        "next_due",
+        "notes",
+        "space_name"
+      ],
+      "id": 1
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:10.752237+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "29f2b6187c8444308f559d662f6e27b0",
+    "tool_name": "get_lease_details",
+    "tool_args": {
+      "lease_id": 1
+    },
+    "mcp_call_number": 8
+  },
+  {
+    "timestamp": "2026-10-14T20:42:10.758009+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "29f2b6187c8444308f559d662f6e27b0",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 9
+  },
+  {
+    "timestamp": "2026-10-14T20:42:10.768305+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "29f2b6187c8444308f559d662f6e27b0",
+    "tool_name": "get_lease_details",
+    "tool_args": {
+      "lease_id": 1
+    },
+    "result_summary": {
+      "keys": [
+        "id",
+        "landlord",
+        "monthly_rent",
+        "next_due",
+        "notes",
+        "space_name"
+      ],
+      "id": 1
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:10.772543+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "29f2b6187c8444308f559d662f6e27b0",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:11.762533+00:00",
+    "event": "agent_run_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 102,
+    "run_id": "5d6fd2ff61b24b0484f1ef8297158354",
+    "parent_run_id": "4bca5471383640ffa5cca606a07a8487",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "Ticket 102 concerns rent for lease 1 and is open.",
+        "The recorded monthly rent is [amount redacted] due 2026-09-02. The shop date is 2026-08-31, so rent is not yet overdue.",
+        "The lease record contains no payment-status evidence, so payment status cannot be confirmed."
+      ],
+      "recommendation": "Have a human verify payment status against the appropriate records. No payment action was taken; any payment requires human review and approval.",
+      "action_draft": null,
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 4,
+      "total_tokens": 4139
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:13.181311+00:00",
+    "event": "agent_run_completed",
+    "model": "gpt-6-luna",
+    "agent": "facilities",
+    "ticket_id": 102,
+    "run_id": "29f2b6187c8444308f559d662f6e27b0",
+    "parent_run_id": "4bca5471383640ffa5cca606a07a8487",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "complete",
+      "findings": [
+        "Ticket 102 is an open rent notice linked to lease 1.",
+        "Lease records monthly rent of [amount redacted] with the next due date of 2026-09-02. Shop date is 2026-08-31, so rent is not yet overdue.",
+        "The lease record provides no additional notes about payment terms or other property deadlines."
+      ],
+      "recommendation": "Review the rent notice against the shop's payment records with accounting and arrange any needed payment proposal for human review. Do not contact the landlord or make commitments based on the lease details alone.",
+      "action_draft": null,
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 3,
+      "total_tokens": 3550
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:16.623865+00:00",
+    "event": "agent_run_completed",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 102,
+    "run_id": "4bca5471383640ffa5cca606a07a8487",
+    "parent_run_id": null,
+    "output_type": "BossReport",
+    "human_approval_required": true,
+    "decision_count": 1,
+    "agent_statement": {
+      "decisions": [
+        {
+          "ticket_id": 102,
+          "summary": "Rent of [amount redacted] is due 2026-09-02 and is not overdue as of the shop date, 2026-08-31. Payment status is unverified.",
+          "specialist_findings": [
+            {
+              "agent": "accounting",
+              "status": "needs_human_review",
+              "findings": [
+                "Lease records [amount redacted] monthly rent due 2026-09-02; it is not overdue as of 2026-08-31.",
+                "The lease record does not establish whether payment has been made."
+              ],
+              "recommendation": "Have a human verify payment status in the appropriate records. Any payment requires human review and approval."
+            },
+            {
+              "agent": "facilities",
+              "status": "complete",
+              "findings": [
+                "Lease record contains no additional payment terms or other property deadlines."
+              ],
+              "recommendation": "Coordinate any needed payment proposal with accounting; do not contact the landlord or make commitments."
+            }
+          ],
+          "recommendation": "Keep the ticket open while accounting verifies payment status. If payment is needed, prepare a proposal for human review and approval; do not initiate payment.",
+          "action_draft": null,
+          "unresolved_questions": [
+            "Has the rent already been paid?"
+          ],
+          "human_approval_required": true
+        }
+      ],
+      "stopped_reason": null
+    },
+    "usage": {
+      "requests": 2,
+      "tool_calls": 4,
+      "total_tokens": 3876
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:42:16.631082+00:00",
+    "event": "ticket_resolved",
+    "model": "gpt-6-luna",
+    "ticket_id": 102,
+    "source": "agent_run_completed"
+  },
+  {
+    "timestamp": "2026-10-14T20:42:46.001521+00:00",
+    "event": "human_action_approved",
+    "action_type": "rent_payment",
+    "ticket_id": 102,
+    "invoice_id": null,
+    "lease_id": 1,
+    "outcome": "recorded"
+  },
+  {
+    "timestamp": "2026-10-14T20:43:22.187754+00:00",
+    "event": "agent_run_started",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "349b273ef64240a29b55143aa537d494",
+    "parent_run_id": null,
+    "delegation_depth": 0,
+    "agent_run_number": 1,
+    "total_tokens_limit": 16000
+  },
+  {
+    "timestamp": "2026-10-14T20:43:25.025839+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "349b273ef64240a29b55143aa537d494",
+    "tool_name": "get_ticket_103_bulk_hoodie_context",
+    "tool_args": {},
+    "mcp_call_number": 1
+  },
+  {
+    "timestamp": "2026-10-14T20:43:25.031084+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "349b273ef64240a29b55143aa537d494",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "mcp_call_number": 2
+  },
+  {
+    "timestamp": "2026-10-14T20:43:25.045656+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "349b273ef64240a29b55143aa537d494",
+    "tool_name": "get_ticket_103_bulk_hoodie_context",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "related_records",
+        "ticket"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:43:25.050847+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "349b273ef64240a29b55143aa537d494",
+    "tool_name": "get_shop_date",
+    "tool_args": {},
+    "result_summary": {
+      "keys": [
+        "date_today"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:43:27.075785+00:00",
+    "event": "agent_run_started",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2f5f87c0c7d4d059c8e63549d9b8462",
+    "parent_run_id": "349b273ef64240a29b55143aa537d494",
+    "delegation_depth": 1,
+    "agent_run_number": 2,
+    "total_tokens_limit": 12000
+  },
+  {
+    "timestamp": "2026-10-14T20:43:27.082409+00:00",
+    "event": "agent_run_started",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "851cb74c184b4ea19f95032b6d179a22",
+    "parent_run_id": "349b273ef64240a29b55143aa537d494",
+    "delegation_depth": 1,
+    "agent_run_number": 3,
+    "total_tokens_limit": 12000
+  },
+  {
+    "timestamp": "2026-10-14T20:43:28.809417+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "851cb74c184b4ea19f95032b6d179a22",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "mcp_call_number": 3
+  },
+  {
+    "timestamp": "2026-10-14T20:43:28.817653+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "851cb74c184b4ea19f95032b6d179a22",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 103,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:43:29.224821+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2f5f87c0c7d4d059c8e63549d9b8462",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "mcp_call_number": 4
+  },
+  {
+    "timestamp": "2026-10-14T20:43:29.230984+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2f5f87c0c7d4d059c8e63549d9b8462",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "navy hoodie",
+      "size": "M"
+    },
+    "mcp_call_number": 5
+  },
+  {
+    "timestamp": "2026-10-14T20:43:29.241632+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2f5f87c0c7d4d059c8e63549d9b8462",
+    "tool_name": "get_ticket_summary",
+    "tool_args": {
+      "ticket_id": 103
+    },
+    "result_summary": {
+      "keys": [
+        "created_at",
+        "id",
+        "invoice_id",
+        "lease_id",
+        "qty",
+        "size",
+        "sku",
+        "status",
+        "subject",
+        "type"
+      ],
+      "id": 103,
+      "status": "open"
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:43:29.247613+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2f5f87c0c7d4d059c8e63549d9b8462",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "navy hoodie",
+      "size": "M"
+    },
+    "result_summary": {
+      "result_type": "NoneType",
+      "has_result": false
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:43:30.543501+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "851cb74c184b4ea19f95032b6d179a22",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY"
+    },
+    "mcp_call_number": 6
+  },
+  {
+    "timestamp": "2026-10-14T20:43:30.557089+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "851cb74c184b4ea19f95032b6d179a22",
+    "tool_name": "get_product_pricing",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY"
+    },
+    "result_summary": {
+      "keys": [
+        "list_price",
+        "sku",
+        "unit_cost"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:43:30.602853+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2f5f87c0c7d4d059c8e63549d9b8462",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY",
+      "size": "M"
+    },
+    "mcp_call_number": 7
+  },
+  {
+    "timestamp": "2026-10-14T20:43:30.610862+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2f5f87c0c7d4d059c8e63549d9b8462",
+    "tool_name": "get_inventory_stock",
+    "tool_args": {
+      "sku": "CC-HOOD-NAVY",
+      "size": "M"
+    },
+    "result_summary": {
+      "keys": [
+        "location",
+        "name",
+        "qty",
+        "size",
+        "sku"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:43:31.995949+00:00",
+    "event": "mcp_tool_call_started",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2f5f87c0c7d4d059c8e63549d9b8462",
+    "tool_name": "list_vendors",
+    "tool_args": {},
+    "mcp_call_number": 8
+  },
+  {
+    "timestamp": "2026-10-14T20:43:32.009459+00:00",
+    "event": "mcp_tool_call_completed",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2f5f87c0c7d4d059c8e63549d9b8462",
+    "tool_name": "list_vendors",
+    "tool_args": {},
+    "result_summary": {
+      "record_count": 3
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:43:34.038359+00:00",
+    "event": "agent_run_completed",
+    "model": "gpt-6-luna",
+    "agent": "accounting",
+    "ticket_id": 103,
+    "run_id": "851cb74c184b4ea19f95032b6d179a22",
+    "parent_run_id": "349b273ef64240a29b55143aa537d494",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "The ticket requests a bulk discount on 20 units of [name redacted]-HOOD-NAVY.",
+        "Recorded unit cost is [amount redacted] and list price is [amount redacted], a [amount redacted] per-unit spread before other expenses.",
+        "At list price, the order totals [amount redacted], with recorded merchandise cost of [amount redacted] and a [amount redacted] gross spread before other expenses.",
+        "The requested discount amount or proposed sale price is not specified, so the resulting margin cannot be assessed."
+      ],
+      "recommendation": "Request the proposed unit price or discount and have a human review the resulting margin before applying any price override. No price was changed.",
+      "action_draft": "Price override proposal not yet specified: 20 units of [name redacted]-HOOD-NAVY; current list price $58.00 each and recorded unit cost $22.00 each. Obtain the proposed sale price/discount and review margin before human approval.",
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 2,
+      "total_tokens": 3992
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:43:34.331202+00:00",
+    "event": "agent_run_completed",
+    "model": "gpt-6-luna",
+    "agent": "inventory",
+    "ticket_id": 103,
+    "run_id": "f2f5f87c0c7d4d059c8e63549d9b8462",
+    "parent_run_id": "349b273ef64240a29b55143aa537d494",
+    "output_type": "AgentFinding",
+    "human_approval_required": true,
+    "decision_count": 0,
+    "agent_statement": {
+      "status": "needs_human_review",
+      "findings": [
+        "Ticket #103 requests 20 units of [name redacted]-HOOD-NAVY in size M; current recorded stock is 8, leaving a shortfall of 12.",
+        "[name redacted] is listed as an apparel reprint candidate with a recorded 5-day lead time, but no database record verifies it as supplier for this SKU."
+      ],
+      "recommendation": "Fulfillment of all 20 units is not supported by current stock. Escalate the 12-unit shortage for human review and verify supplier and delivery quantity before planning fulfillment. No order or inventory change was made.",
+      "action_draft": null,
+      "human_approval_required": true
+    },
+    "usage": {
+      "requests": 4,
+      "tool_calls": 4,
+      "total_tokens": 6023
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:43:38.456219+00:00",
+    "event": "agent_run_completed",
+    "model": "gpt-6-luna",
+    "agent": "boss",
+    "ticket_id": 103,
+    "run_id": "349b273ef64240a29b55143aa537d494",
+    "parent_run_id": null,
+    "output_type": "BossReport",
+    "human_approval_required": true,
+    "decision_count": 1,
+    "agent_statement": {
+      "decisions": [
+        {
+          "ticket_id": 103,
+          "summary": "Do not approve the requested bulk discount or promise fulfillment yet: available stock is short, and the requested discount is unspecified.",
+          "specialist_findings": [
+            {
+              "agent": "inventory",
+              "status": "needs_human_review",
+              "findings": [
+                "Current size-M stock is 8 against a request for 20, leaving a shortage of 12.",
+                "A possible reprint candidate is recorded, but the supplier association and quantity are unverified."
+              ],
+              "recommendation": "Verify whether the shortage can be sourced before planning fulfillment; no order or inventory change was made."
+            },
+            {
+              "agent": "accounting",
+              "status": "needs_human_review",
+              "findings": [
+                "Unit cost is [amount redacted] and list price is [amount redacted]; at list price the order would total [amount redacted] with a [amount redacted] gross spread before other expenses.",
+                "The proposed discount or sale price was not provided, so its margin cannot be evaluated."
+              ],
+              "recommendation": "Obtain the proposed unit price or discount and have a human review the margin before any price override."
+            }
+          ],
+          "recommendation": "Ask for the proposed price or discount and verify a source for the 12-unit shortage. Hold the price override and fulfillment plan pending human review; no price, inventory, or purchase action was taken.",
+          "action_draft": null,
+          "unresolved_questions": [
+            "What unit price or discount is being requested?",
+            "Can the 12-unit shortage be sourced, and is the potential supplier confirmed for this SKU?"
+          ],
+          "human_approval_required": true
+        }
+      ],
+      "stopped_reason": null
+    },
+    "usage": {
+      "requests": 3,
+      "tool_calls": 4,
+      "total_tokens": 5858
+    }
+  },
+  {
+    "timestamp": "2026-10-14T20:43:38.463192+00:00",
+    "event": "ticket_resolved",
+    "model": "gpt-6-luna",
+    "ticket_id": 103,
+    "source": "agent_run_completed"
+  }
+]

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" role="img" aria-labelledby="title desc">
+  <title id="title">Bulldog face</title>
+  <desc id="desc">A simple, friendly Bulldog face drawn with Yale navy blue lines on a transparent background.</desc>
+  <g fill="none" stroke="#102c6b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Broad, floppy ears -->
+    <path d="M69 174C47 169 17 124 6 91-2 67 0 57 21 41 45 22 79 7 99 7c24 2 54 33 78 64M491 174c22-5 52-50 63-83 8-24 6-34-15-50-24-19-58-34-78-34-24 2-54 33-78 64"/>
+    <path d="M99 8C79 48 67 109 51 166M461 8c20 40 32 101 48 158"/>
+
+    <!-- Wide, softly squared head -->
+    <path d="M71 176c14-39 33-73 59-96 34-30 62-37 96-31 25 4 44 5 54 5s29-1 54-5c34-6 62 1 96 31 26 23 45 57 59 96 12 34 21 79 20 116-2 57-20 112-48 148-20 25-47 31-72 23-28-9-43-37-61-69-18-31-31-53-48-53s-30 22-48 53c-18 32-33 60-61 69-25 8-52 2-72-23-28-36-46-91-48-148-1-37 8-82 20-116Z"/>
+
+    <!-- Gentle forehead folds and brows -->
+    <path d="M193 49c21-9 43-11 65-8m44 0c22-3 44-1 65 8" stroke-width="8"/>
+    <path d="M94 193c8-34 34-55 69-57 29-2 39 19 40 52v27m263-22c-8-34-34-55-69-57-29-2-39 19-40 52v27"/>
+
+    <!-- Round eyes -->
+    <circle cx="157" cy="181" r="13" fill="#102c6b" stroke="none"/>
+    <circle cx="403" cy="181" r="13" fill="#102c6b" stroke="none"/>
+    <circle cx="160" cy="177" r="3" fill="#fff" stroke="none"/>
+    <circle cx="406" cy="177" r="3" fill="#fff" stroke="none"/>
+
+    <!-- Broad muzzle and friendly underbite -->
+    <path d="M180 244c22-23 52-36 90-36s68 13 90 36m-180 0c-25 25-40 65-40 111v48m260-159c25 25 40 65 40 111v48"/>
+    <path d="M218 238c11-7 32-11 52-11s41 4 52 11c7 5 4 17-3 29-14 23-33 38-49 38s-35-15-49-38c-7-12-10-24-3-29Z"/>
+    <path d="M270 294v64m0 0c-23-1-35 10-49 34-15 26-31 61-56 70m105-104c23-1 35 10 49 34 15 26 31 61 56 70"/>
+    <path d="M224 414c14 16 29 23 46 23s32-7 46-23"/>
+  </g>
+</svg>

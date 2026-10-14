@@ -1,0 +1,115 @@
+[
+  {
+    "id": 101,
+    "final_status": "resolved",
+    "run_model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "evidence_status": "final_successful_run",
+    "short_outcome": "The run found no size-S tees in stock and an overdue, unpaid reprint invoice with an active vendor shipping hold. A human later approved the $840 invoice payment, but no restock or fulfillment was recorded.",
+    "agent_contributions": [
+      {
+        "agent": "Boss",
+        "contribution": "Read the ticket-specific tee and reprint context and shop date, delegated to Inventory and Accounting, and recommended holding shipment until the reprint order, quantity, delivery, and invoice status were verified."
+      },
+      {
+        "agent": "Inventory",
+        "contribution": "Confirmed zero size-S tees, traced invoice 501 to its description and linked vendor, checked vendor candidates and shipping hold, and found no database evidence of an order quantity or delivery."
+      },
+      {
+        "agent": "Accounting",
+        "contribution": "Found invoice 501 open and overdue on the shop date and confirmed an active vendor shipping hold; it did not prepare or make a payment."
+      },
+      {
+        "agent": "Facilities",
+        "contribution": "Not called during this run."
+      },
+      {
+        "agent": "Customer service",
+        "contribution": "Not called during this run."
+      }
+    ],
+    "human_approvals": [
+      {
+        "action_type": "invoice_payment",
+        "invoice_id": 501,
+        "amount": 840.0,
+        "payment_record_id": 1,
+        "approved_by": "L",
+        "paid_at": "2026-08-31"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "final_status": "resolved",
+    "run_model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "evidence_status": "final_successful_run",
+    "short_outcome": "The run confirmed lease 1 rent of $2,400 was due 2026-09-02 and was not overdue on the 2026-08-31 shop date, but could not verify payment status. A human later approved and recorded the rent payment.",
+    "agent_contributions": [
+      {
+        "agent": "Boss",
+        "contribution": "Read the rent context and shop date, delegated to Facilities and Accounting, and recommended checking payment status before deciding on payment."
+      },
+      {
+        "agent": "Inventory",
+        "contribution": "Not called during this run."
+      },
+      {
+        "agent": "Accounting",
+        "contribution": "Reviewed ticket and shop date; an initial lease lookup using ID 102 returned no record, and a lookup for the linked lease ID 1 confirmed the rent and due date. It could not verify whether rent had already been paid."
+      },
+      {
+        "agent": "Facilities",
+        "contribution": "Reviewed ticket 102 and lease 1, confirming Chapel Street rent of $2,400 to Elm City Properties due 2026-09-02; it was not yet overdue."
+      },
+      {
+        "agent": "Customer service",
+        "contribution": "Not called during this run."
+      }
+    ],
+    "human_approvals": [
+      {
+        "action_type": "rent_payment",
+        "lease_id": 1,
+        "payee": "Elm City Properties",
+        "purpose": "Monthly rent for Chapel Street shop",
+        "amount": 2400.0,
+        "payment_record_id": 2,
+        "approved_by": "L",
+        "paid_at": "2026-08-31"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "final_status": "resolved",
+    "run_model": "gpt-6-luna",
+    "reasoning_effort": "none",
+    "evidence_status": "final_successful_run",
+    "short_outcome": "The run found 8 of 20 requested size-M hoodies in stock. The ticket did not specify the proposed discount or unit price, and the potential vendor was not verified for the SKU, so price and sourcing decisions remain pending human review; no cash action occurred.",
+    "agent_contributions": [
+      {
+        "agent": "Boss",
+        "contribution": "Read the bulk-hoodie context and shop date, delegated to Inventory and Accounting, and recommended requesting the proposed sale price and verifying the 12-unit shortage before committing."
+      },
+      {
+        "agent": "Inventory",
+        "contribution": "An initial stock lookup using “navy hoodie” returned no record; using SKU CC-HOOD-NAVY confirmed 8 size-M units and a 12-unit shortfall. It listed a possible apparel-reprint vendor but could not verify the vendor for this SKU."
+      },
+      {
+        "agent": "Accounting",
+        "contribution": "Reviewed the ticket and product pricing, finding a $22 unit cost and $58 list price. The requested discount or sale price was unspecified, so it could not assess the resulting margin."
+      },
+      {
+        "agent": "Facilities",
+        "contribution": "Not called during this run."
+      },
+      {
+        "agent": "Customer service",
+        "contribution": "Not called during this run."
+      }
+    ],
+    "human_approvals": []
+  }
+]

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Customs — Ticket Planning Desk</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1c2d3d;
+      --muted: #596b7b;
+      --line: #d7e0e8;
+      --paper: #ffffff;
+      --wash: #f3f7fa;
+      --navy: #183b56;
+      --gold: #f0c35a;
+      --blue: #e9f2f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--wash);
+      color: var(--ink);
+      font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .page {
+      width: min(100% - 2rem, 1000px);
+      margin: 0 auto;
+      padding: 2.5rem 0 4rem;
+    }
+
+    header { margin-bottom: 1.5rem; }
+
+    .eyebrow {
+      margin: 0 0 .4rem;
+      color: #58738a;
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: .4rem; font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.15; }
+    code { font-family: inherit; font-size: inherit; }
+    .intro { margin-bottom: 0; color: var(--muted); }
+    .run-model-note { margin: 1rem 0 0; padding: .85rem 1rem; border: 1px solid #e8d28f; border-radius: 10px; background: #fff8e5; color: #654c0b; }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin: 1.5rem 0 1rem;
+      padding: .4rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #eaf0f5;
+    }
+
+    .tab {
+      min-height: 44px;
+      padding: .65rem 1rem;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: var(--navy);
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+    }
+
+    .tab:hover { background: #fff9e9; }
+    .tab[aria-selected="true"] { background: var(--navy); color: white; }
+    .tab:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+    .panel {
+      padding: clamp(1.1rem, 3vw, 2rem);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--paper);
+      box-shadow: 0 8px 24px rgb(24 59 86 / 6%);
+    }
+
+    .panel[hidden] { display: none; }
+    .panel-heading { margin-bottom: 1.25rem; }
+    .panel-heading h2 { margin-bottom: .2rem; font-size: 1.45rem; }
+    .panel-heading p { margin-bottom: 0; color: var(--muted); }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .section-card {
+      min-width: 0;
+      padding: 1.2rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fcfdfe;
+    }
+
+    .section-card h3 { margin-bottom: .8rem; font-size: 1.05rem; }
+    .field-list { margin: 0; padding: 0; list-style: none; }
+    .field-list li { padding: .85rem 0; border-top: 1px solid #e8edf1; }
+    .field-list li:first-child { padding-top: 0; border-top: 0; }
+    .field-list strong { display: block; margin-bottom: .25rem; }
+    .pending { margin: 0; color: var(--muted); font-size: .93rem; }
+    .actual-ledger { margin: 0; padding: 0; list-style: none; }
+    .actual-ledger li { padding: .8rem 0; border-top: 1px solid #e8edf1; }
+    .actual-ledger li:first-child { padding-top: 0; border-top: 0; }
+    .actual-ledger strong { display: block; margin-bottom: .2rem; }
+    .actual-ledger p { margin: 0; color: var(--muted); font-size: .93rem; }
+    .actual-ledger ul { margin: .35rem 0 0; padding-left: 1.2rem; color: var(--muted); font-size: .9rem; }
+    .cash-ledger { width: 100%; border-collapse: collapse; text-align: left; }
+    .cash-ledger th, .cash-ledger td { padding: .7rem .55rem; border-bottom: 1px solid #e8edf1; }
+    .cash-ledger th { color: var(--navy); font-size: .86rem; }
+    .cash-ledger td:last-child { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .cash-current { margin: 1rem 0 .35rem; padding: .85rem 1rem; border-left: 4px solid var(--gold); background: #fff9e9; font-weight: 750; }
+    .cash-note { margin: .4rem 0 0; color: var(--muted); font-size: .9rem; }
+    .reflection-copy { max-width: 78ch; color: var(--muted); }
+    .reflection-copy p { margin: 0 0 1rem; }
+    .reflection-copy p:last-child { margin-bottom: 0; }
+
+    .coming-later {
+      display: inline-block;
+      padding: .45rem .7rem;
+      border: 1px solid #e8d28f;
+      border-radius: 999px;
+      background: #fff8e5;
+      color: #654c0b;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 680px) {
+      .page { width: min(100% - 1rem, 1000px); padding-top: 1.5rem; }
+      .sections { grid-template-columns: 1fr; }
+      .tab { flex: 1 1 28%; padding-inline: .65rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">Campus Customs · Homework 5</p>
+      <h1>Ticket Planning Desk</h1>
+      <p class="intro">Expected plans and actual run notes for tickets 101, 102, and 103.</p>
+      <p class="run-model-note"><strong>Run model note:</strong> The append-only audit trail retains historical calls, including earlier <code>gpt-5.6-luna</code> attempts before I updated to use the correct model, <code>gpt-6-luna</code>. The Actual sections, cash figures, and reflections on this page reflect the successful final runs using <code>gpt-6-luna</code>.</p>
+    </header>
+
+    <div class="tabs" role="tablist" aria-label="Desk sections">
+      <button class="tab" id="tab-101" type="button" role="tab" aria-selected="true" aria-controls="panel-101" tabindex="0">Ticket 101</button>
+      <button class="tab" id="tab-102" type="button" role="tab" aria-selected="false" aria-controls="panel-102" tabindex="-1">Ticket 102</button>
+      <button class="tab" id="tab-103" type="button" role="tab" aria-selected="false" aria-controls="panel-103" tabindex="-1">Ticket 103</button>
+      <button class="tab" id="tab-cash" type="button" role="tab" aria-selected="false" aria-controls="panel-cash" tabindex="-1">Cash</button>
+      <button class="tab" id="tab-reflection" type="button" role="tab" aria-selected="false" aria-controls="panel-reflection" tabindex="-1">Reflection</button>
+    </div>
+
+    <section class="panel" id="panel-101" role="tabpanel" aria-labelledby="tab-101" tabindex="0">
+      <div class="panel-heading"><h2>Ticket 101</h2><p>Plan the expected agent workflow, then record the actual run.</p></div>
+      <div class="sections">
+        <section class="section-card" aria-labelledby="expected-101">
+          <h3 id="expected-101">Expected</h3>
+          <ul class="field-list">
+            <li><strong>Who the boss should call first, and why</strong><p>The Inventory agent, because the t-shirt order may be out of stock, making this an inventory question first.</p></li>
+            <li><strong>Expected agent delegations</strong><p>The boss should call the Inventory, Accounting, and Customer service agents.</p></li>
+            <li><strong>Expected MCP tools</strong>
+              <ul>
+                <li><b>Boss:</b> <code>get_ticket_101_tee_reprint_context</code>, <code>get_shop_date</code></li>
+                <li><b>Inventory:</b> <code>get_ticket_summary</code>, <code>get_inventory_stock</code>, <code>list_vendors</code>, <code>check_vendor_shipping_hold</code></li>
+                <li><b>Accounting:</b> <code>get_ticket_summary</code>, <code>get_shop_date</code>, <code>get_accounting_snapshot</code>, <code>get_product_pricing</code></li>
+                <li><b>Customer service:</b> <code>get_ticket_summary</code>, <code>get_inventory_stock</code>, <code>get_customer_list_price</code>, <code>get_invoice_status_for_ticket</code></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="section-card" aria-labelledby="actual-101">
+          <h3 id="actual-101">Actual</h3>
+          <ul class="actual-ledger">
+            <li><strong>Agents and delegation</strong><p>The Boss read ticket 101 and the shop date, then delegated to Inventory and Accounting. Customer service and Facilities were not called; no specialist-to-specialist delegation was recorded.</p></li>
+            <li><strong>MCP tools used</strong>
+              <ul>
+                <li><b>Boss:</b> <code>get_ticket_101_tee_reprint_context</code>, <code>get_shop_date</code></li>
+                <li><b>Inventory:</b> <code>get_ticket_summary</code>, <code>get_inventory_stock</code>, <code>get_ticket_invoice_vendor_context</code>, <code>list_vendors</code>, <code>check_vendor_shipping_hold</code></li>
+                <li><b>Accounting:</b> <code>get_ticket_summary</code>, <code>get_accounting_snapshot</code>, <code>list_vendors</code>, <code>get_shop_date</code>, <code>check_vendor_shipping_hold</code></li>
+                <li><b>Customer service and Facilities:</b> Not called.</li>
+              </ul>
+            </li>
+            <li><strong>Findings, decision, and human action</strong><p>Inventory found 0 size-S tees. Invoice 501 was open for $840 and overdue on the shop date, 2026-08-31; Accounting and Inventory confirmed the vendor shipping hold. Inventory traced the invoice description to a rush reprint of CC-TEE-WHITE S and Bulldog Print Co, whose recorded specialty is apparel reprints with a five-day lead time. The database does not confirm an order, quantity, or delivery. The Boss recommended holding shipment pending verification. After the run, a human approved invoice 501 for $840 (payment record 1; approved by L), and the invoice is now paid. No stock or delivery was recorded, so fulfillment remains incomplete. The backend marked the agent workflow resolved.</p></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-102" role="tabpanel" aria-labelledby="tab-102" tabindex="0" hidden>
+      <div class="panel-heading"><h2>Ticket 102</h2><p>Plan the expected agent workflow, then record the actual run.</p></div>
+      <div class="sections">
+        <section class="section-card" aria-labelledby="expected-102">
+          <h3 id="expected-102">Expected</h3>
+          <ul class="field-list">
+            <li><strong>Who the boss should call first, and why</strong><p>The Facilities agent, because it can review the lease information needed to handle a rent due notice.</p></li>
+            <li><strong>Expected agent delegations</strong><p>The boss should call the Facilities and Accounting agents.</p></li>
+            <li><strong>Expected MCP tools</strong>
+              <ul>
+                <li><b>Boss:</b> <code>get_ticket_102_rent_context</code>, <code>get_shop_date</code></li>
+                <li><b>Facilities:</b> <code>get_ticket_summary</code>, <code>get_shop_date</code>, <code>get_lease_details</code></li>
+                <li><b>Accounting:</b> <code>get_ticket_summary</code>, <code>get_shop_date</code>, <code>get_accounting_snapshot</code></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="section-card" aria-labelledby="actual-102">
+          <h3 id="actual-102">Actual</h3>
+          <ul class="actual-ledger">
+            <li><strong>Agents and delegation</strong><p>The Boss read the rent context and shop date, then delegated to Facilities and Accounting. Inventory and Customer service were not called; no specialist-to-specialist delegation was recorded.</p></li>
+            <li><strong>MCP tools used</strong>
+              <ul>
+                <li><b>Boss:</b> <code>get_ticket_102_rent_context</code>, <code>get_shop_date</code></li>
+                <li><b>Facilities:</b> <code>get_ticket_summary</code>, <code>get_shop_date</code>, <code>get_lease_details</code></li>
+                <li><b>Accounting:</b> <code>get_ticket_summary</code>, <code>get_shop_date</code>, <code>get_lease_details</code>. It first queried lease ID 102 and got no record, then queried linked lease ID 1 successfully.</li>
+                <li><b>Inventory and Customer service:</b> Not called.</li>
+              </ul>
+            </li>
+            <li><strong>Findings, decision, and human action</strong><p>Facilities confirmed lease 1 is for the Chapel Street shop, with monthly rent of $2,400 payable to Elm City Properties and next due on 2026-09-02. On the shop date, 2026-08-31, rent was not yet overdue. Accounting could not verify payment status from the lease record. The Boss recommended keeping the ticket open until payment status was checked, but the backend marked the agent workflow resolved. After the run, a human approved and recorded the $2,400 rent payment against lease 1 (payment record 2; approved by L); no invoice was involved.</p></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-103" role="tabpanel" aria-labelledby="tab-103" tabindex="0" hidden>
+      <div class="panel-heading"><h2>Ticket 103</h2><p>Plan the expected agent workflow, then record the actual run.</p></div>
+      <div class="sections">
+        <section class="section-card" aria-labelledby="expected-103">
+          <h3 id="expected-103">Expected</h3>
+          <ul class="field-list">
+            <li><strong>Who the boss should call first, and why</strong><p>The Inventory agent, because the team needs to understand available stock before deciding next steps for the group order.</p></li>
+            <li><strong>Expected agent delegations</strong><p>The boss should call the Inventory, Accounting, and Customer service agents.</p></li>
+            <li><strong>Expected MCP tools</strong>
+              <ul>
+                <li><b>Boss:</b> <code>get_ticket_103_bulk_hoodie_context</code></li>
+                <li><b>Inventory:</b> <code>get_ticket_summary</code>, <code>get_inventory_stock</code>, <code>list_vendors</code>, <code>check_vendor_shipping_hold</code></li>
+                <li><b>Accounting:</b> <code>get_ticket_summary</code>, <code>get_product_pricing</code>, <code>get_shop_date</code>, <code>get_accounting_snapshot</code></li>
+                <li><b>Customer service:</b> <code>get_ticket_summary</code>, <code>get_inventory_stock</code>, <code>get_customer_list_price</code></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="section-card" aria-labelledby="actual-103">
+          <h3 id="actual-103">Actual</h3>
+          <ul class="actual-ledger">
+            <li><strong>Agents and delegation</strong><p>The Boss read the bulk-hoodie context and shop date, then delegated to Inventory and Accounting. Facilities and Customer service were not called; no specialist-to-specialist delegation was recorded.</p></li>
+            <li><strong>MCP tools used</strong>
+              <ul>
+                <li><b>Boss:</b> <code>get_ticket_103_bulk_hoodie_context</code>, <code>get_shop_date</code></li>
+                <li><b>Inventory:</b> <code>get_ticket_summary</code>, <code>get_inventory_stock</code>, <code>list_vendors</code>. An initial lookup using “navy hoodie” returned no record; the lookup using SKU <code>CC-HOOD-NAVY</code> returned stock.</li>
+                <li><b>Accounting:</b> <code>get_ticket_summary</code>, <code>get_product_pricing</code></li>
+                <li><b>Facilities and Customer service:</b> Not called.</li>
+              </ul>
+            </li>
+            <li><strong>Findings, decision, and human action</strong><p>Inventory confirmed 8 of the requested 20 size-M hoodies were in stock, a shortfall of 12. It listed an apparel-reprint vendor with a five-day lead time, but the database does not verify the vendor for this SKU. Accounting found a $22 unit cost and $58 list price, but the ticket did not specify the requested discount or sale price, so the resulting margin could not be assessed. The Boss recommended requesting the proposed price and verifying sourcing before fulfillment. No price change, purchase, payment, inventory change, or shipment occurred, and there were no human approvals. The backend marked the agent workflow resolved while those business decisions remain pending.</p></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-cash" role="tabpanel" aria-labelledby="tab-cash" tabindex="0" hidden>
+      <div class="panel-heading"><h2>Cash</h2><p>Cash tracking and notes.</p></div>
+      <p class="cash-note"><strong>Final gpt-6-luna runs:</strong> Earlier calls remain in the append-only audit trail; this ledger reflects the successful runs shown in the Actual sections and their human-approved payments.</p>
+      <table class="cash-ledger">
+        <thead><tr><th scope="col">Ticket / cash event</th><th scope="col">Change</th></tr></thead>
+        <tbody>
+          <tr><td>Starting checking balance after database reset</td><td>$3,400.00</td></tr>
+          <tr><td>Ticket 101 — human-approved payment for invoice 501 (payment record 1; approved by L)</td><td>−$840.00</td></tr>
+          <tr><td>Ticket 102 — human-approved rent payment to Elm City Properties for Chapel Street shop (lease 1; payment record 2; approved by L)</td><td>−$2,400.00</td></tr>
+          <tr><td>Ticket 103 — successful agent run; no payment or purchase approved or recorded</td><td>$0.00</td></tr>
+          <tr><td><strong>Ending checking balance</strong></td><td><strong>$160.00</strong></td></tr>
+        </tbody>
+      </table>
+      <p class="cash-note">Math: $3,400.00 − $840.00 − $2,400.00 + $0.00 = $160.00. The ending balance matches <code>cash_accounts</code> in <code>data/campus_customs_new.db</code> on 2026-08-31.</p>
+    </section>
+
+    <section class="panel" id="panel-reflection" role="tabpanel" aria-labelledby="tab-reflection" tabindex="0" hidden>
+      <div class="panel-heading"><h2>Reflection</h2><p>Thoughts on the agent runs, their results, and possible future uses.</p></div>
+      <div class="reflection-copy">
+        <p>Overall, I think the agents’ performance on the tickets was varied. Ticket 102 was the most successful: the Boss called the two appropriate agents, and Accounting solved its initial lookup problem by finding the correct lease record. Facilities and Accounting confirmed the $2,400 rent amount and due date for human review. Tickets 101 and 103 were also relatively successful, with a few missing pieces. For ticket 101, the Boss called two of the three agents I expected. Inventory and Accounting identified the $840 invoice and its vendor context, and a human later approved the payment. Customer service was not called, and the database still does not establish the tee order quantity or delivery. For ticket 103, Inventory correctly found that 8 of 20 requested hoodies were in stock, and Accounting found the $22 unit cost. Customer service was not called to draft a response, and the unspecified discount and sourcing decision remain open.</p>
+        <p>For all three runs, the actual workflow differed from my plan. Customer service was not called for tickets 101 or 103, so no email drafts were generated. On ticket 101, Inventory used the additional <code>get_ticket_invoice_vendor_context</code> tool, which helped connect the reprint invoice with Bulldog Print Co. On ticket 102, Accounting used <code>get_lease_details</code> rather than the expected accounting snapshot, and its first lease ID query returned no record before it checked the linked lease. The final run established the rent amount and due date, but payment was made afterward by a human. Ticket 103 had the largest delegation difference because Customer service was not called. The backend marked its agent workflow resolved and correctly recorded no cash change, although price and sourcing decisions still need follow-up.</p>
+        <p>The earlier attempts used <code>gpt-5.6-luna</code> because the project-level setup instructions specified that model, and the agent configuration followed those instructions. I later checked the Homework 5 requirement and updated the agents to <code>gpt-6-luna</code>. The append-only audit trail preserves the earlier attempts, while the Actual sections, cash figures, and this reflection describe the successful final runs using <code>gpt-6-luna</code>.</p>
+        <p>I think ticket 103 could be handled more efficiently by one agent with tools, since the run involved no payment or purchase approval. One agent could review the ticket, flag the inventory shortfall, identify that the requested price is missing, and prepare an email draft for review. The actual run involved three agents total (the Boss, Inventory, and Accounting), compared with the four agents I expected when I included Customer service. The separate agents provided useful inventory and accounting findings, but the missing customer-service draft left out a customer-facing next step.</p>
+        <p>The agents could provide a different product suggestion if the one requested is sold out. The agents could generate reports on what items are most popular for group or custom orders. The agents could suggest similar items that are cheaper for groups seeking discounts and include that list in a customer service agent generated email draft.</p>
+        <p>The agents couldn’t track an order or shipment, so it wouldn’t be able to provide an update to customers on potential restock dates. They also couldn’t predict what products may go out of stock faster and recommend reordering in advance of inventory running out. And finally, it couldn’t compare availability across suppliers for specific item restocks, so it couldn’t help campus customs find the best deals for restocking a specific item.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const tabs = [...document.querySelectorAll('[role="tab"]')];
+    const panels = [...document.querySelectorAll('[role="tabpanel"]')];
+
+    function activateTab(tab, moveFocus = false) {
+      tabs.forEach((item) => {
+        const selected = item === tab;
+        item.setAttribute('aria-selected', String(selected));
+        item.tabIndex = selected ? 0 : -1;
+      });
+      panels.forEach((panel) => {
+        panel.hidden = panel.id !== tab.getAttribute('aria-controls');
+      });
+      if (moveFocus) tab.focus();
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activateTab(tab));
+      tab.addEventListener('keydown', (event) => {
+        let nextIndex = index;
+        if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === 'Home') nextIndex = 0;
+        else if (event.key === 'End') nextIndex = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        activateTab(tabs[nextIndex], true);
+      });
+    });
+  </script>
+</body>
+</html>

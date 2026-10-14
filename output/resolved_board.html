@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Customs · Resolved ticket board</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, sans-serif; color: #192440; background: #f7f6f1; }
+    body { max-width: 1080px; margin: 0 auto; padding: 42px 22px; }
+    h1 { margin: 0; color: #102c6b; font: 700 38px Georgia, serif; }
+    .intro { margin: 8px 0 28px; color: #687287; }
+    .ticket { margin: 18px 0; padding: 22px; border: 1px solid #e2dfd5; border-radius: 6px; background: white; }
+    .ticket h2 { margin: 0 0 6px; color: #102c6b; font: 700 24px Georgia, serif; }
+    .ticket p { margin: 0 0 14px; line-height: 1.55; }
+    .status { display: inline-block; margin-bottom: 14px; padding: 5px 9px; border-radius: 20px; background: #eaf5ec; color: #286443; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .screenshots { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    figure { min-width: 0; display: flex; align-items: center; flex-direction: column; justify-content: center; margin: 0; border: 1px solid #e2dfd5; border-radius: 4px; background: #fbfaf7; color: #7b8391; text-align: center; overflow: hidden; }
+    figure img { display: block; max-width: 100%; max-height: 850px; width: auto; height: auto; object-fit: contain; }
+    figcaption { padding: 14px; }
+    figcaption strong { display: block; margin-bottom: 6px; color: #46536b; }
+    figcaption code { display: block; margin-top: 8px; color: #59677f; font-size: 12px; }
+    @media (max-width: 560px) { body { padding: 28px 14px; } h1 { font-size: 31px; } .ticket { padding: 16px; } figure { min-height: 200px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Resolved ticket board</h1>
+    <p class="intro">Dashboard screenshots for each resolved ticket, including ticket details and the agent run stream.</p>
+  </header>
+  <main>
+    <section class="ticket" aria-labelledby="ticket-101">
+      <h2 id="ticket-101">Ticket 101 · Bulldog tee</h2>
+      <span class="status">Resolved · Human approval recorded</span>
+      <p>Invoice 501 was paid for $840 after approval. The size-S tee remains out of stock, so fulfillment is not complete.</p>
+      <div class="screenshots">
+        <figure><img src="Screenshots/ticket%20101%20details%20correct.png" alt="Updated ticket 101 expanded details showing invoice 501 and the recorded human approval"><figcaption><strong>Ticket 101 · Ticket details</strong></figcaption></figure>
+        <figure><img src="Screenshots/ticket%20101%20run%20stream%20correct.png" alt="Updated ticket 101 agent run stream with Boss, Accounting, and Inventory activity"><figcaption><strong>Ticket 101 · Agent run stream</strong></figcaption></figure>
+      </div>
+    </section>
+    <section class="ticket" aria-labelledby="ticket-102">
+      <h2 id="ticket-102">Ticket 102 · Rent due</h2>
+      <span class="status">Resolved · Human approval recorded</span>
+      <p>Lease 1 rent of $2,400 for the Chapel Street shop was approved and recorded to Elm City Properties.</p>
+      <div class="screenshots">
+        <figure><img src="Screenshots/ticket%20102%20details%20correct.png" alt="Updated ticket 102 expanded details showing lease 1 and the recorded human approval"><figcaption><strong>Ticket 102 · Ticket details</strong></figcaption></figure>
+        <figure><img src="Screenshots/ticket%20102%20run%20stream%20correct.png" alt="Updated ticket 102 agent run stream with Boss, Accounting, and Facilities activity"><figcaption><strong>Ticket 102 · Agent run stream</strong></figcaption></figure>
+      </div>
+    </section>
+    <section class="ticket" aria-labelledby="ticket-103">
+      <h2 id="ticket-103">Ticket 103 · Bulk hoodie price override</h2>
+      <span class="status">Resolved · No human approval recorded</span>
+      <p>The run found 8 of 20 hoodies in stock, an unverified potential vendor, and no proposed discount amount or unit price to review. Price and sourcing decisions remain pending human review; no purchase, payment, or fulfillment occurred.</p>
+      <div class="screenshots">
+        <figure><img src="Screenshots/ticket%20103%20details%20correct.png" alt="Updated ticket 103 expanded details with the price override recommendation and draft"><figcaption><strong>Ticket 103 · Ticket details</strong></figcaption></figure>
+        <figure><img src="Screenshots/ticket%20103%20run%20stream%20correct%20.png" alt="Updated ticket 103 successful agent run stream with Boss, Inventory, and Accounting activity"><figcaption><strong>Ticket 103 · Agent run stream</strong></figcaption></figure>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
